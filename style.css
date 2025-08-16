@@ -1,0 +1,162 @@
+/* --- Basic Setup & Color Variables --- */
+:root {
+    --background-color: #111827;
+    --surface-color: #1F2937;
+    --accent-color: #6EE7B7;
+    --primary-text-dark-bg: #F9FAFB;
+    --secondary-text-dark-bg: #9CA3AF;
+    --border-color: #374151;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--background-color);
+    color: var(--primary-text-dark-bg);
+    overflow: hidden; /* Prevents unwanted page scroll */
+}
+
+/* --- View Structure & Slide Transition --- */
+.portfolio-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.view {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: var(--background-color);
+    transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1); /* Slide effect */
+}
+
+/* Default state for detail views: pushed off to the right */
+.view-detail {
+    transform: translateX(100%);
+}
+
+/* Active state: View is centered on screen */
+.view.view-active {
+    transform: translateX(0);
+}
+
+/* Hidden state: View is pushed off to the left */
+.view.view-hidden {
+    transform: translateX(-100%);
+}
+
+
+/* --- Main View Styling (#view-project-list) --- */
+
+/* Header */
+.main-header { display: flex; justify-content: space-between; align-items: center; padding: 2rem 5%; width: 100%; } /* Padding changed */
+.logo h3 { font-size: 1.5rem; color: var(--accent-color); }
+.logo p { color: var(--secondary-text-dark-bg); }
+.main-nav a { color: var(--secondary-text-dark-bg); text-decoration: none; margin-left: 1.5rem; font-size: 1.5rem; transition: color 0.3s ease; }
+.main-nav a:hover { color: var(--accent-color); }
+.main-nav a.resume-button { color: var(--accent-color); border: 1px solid var(--accent-color); padding: 0.5rem 1rem; border-radius: 5px; font-size: 1rem; }
+
+/* Hero Section */
+#hero { padding: 0 5%; } /* Padding changed */
+
+.hero-content { 
+    display: flex; 
+    flex-direction: row;
+    align-items: center; 
+    justify-content: center;
+    gap: 3rem;
+    min-height: 80vh;
+}
+
+.profile-pic-container {
+    position: relative;
+    width: 156px;
+    height: 156px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.profile-pic-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    padding: 3px;
+    background: conic-gradient(from 90deg, #6EE7B7, #00A3FF, #6EE7B7);
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+}
+
+.philosophy { 
+    font-size: 1.6rem; /* Font size changed */
+    font-weight: 500; 
+    max-width: 700px; /* Max-width increased */
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* General Heading for Sections */
+h2 { text-align: center; font-size: 2.8rem; margin-bottom: 4rem; font-weight: 700; color: var(--accent-color); }
+
+/* Projects Section */
+#projects { padding: 6rem 5%; } /* Padding changed */
+.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; }
+a.project-card-link { text-decoration: none; }
+.project-card { background-color: var(--surface-color); border-radius: 12px; overflow: hidden; transition: transform 0.3s ease; border: 1px solid var(--border-color); color: var(--primary-text-dark-bg); }
+.project-card:hover { transform: translateY(-5px); }
+.project-card img { width: 100%; height: 220px; object-fit: cover; display: block; }
+.project-card h3 { padding: 1.5rem 1.5rem 0.5rem 1.5rem; font-size: 1.5rem; }
+.project-card p { padding: 0 1.5rem 1.5rem 1.5rem; color: var(--secondary-text-dark-bg); }
+
+/* Education Section */
+#education { padding: 6rem 5%; background-color: var(--background-color); } /* Padding changed */
+.education-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; }
+.education-card { background-color: var(--surface-color); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; }
+.education-card h3 { color: var(--accent-color); font-size: 1.5rem; margin-bottom: 0.5rem; }
+.education-card p { color: var(--secondary-text-dark-bg); font-size: 1.1rem; }
+
+/* Technical Experience Section */
+#technical-experience { padding: 6rem 5%; } /* Padding changed */
+.tech-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; max-width: 900px; margin: 0 auto; }
+.tech-tag { background-color: var(--surface-color); border: 1px solid var(--border-color); color: var(--secondary-text-dark-bg); padding: 0.75rem 1.5rem; border-radius: 20px; font-size: 1rem; font-weight: 500; transition: all 0.2s ease-in-out; }
+.tech-tag:hover { color: var(--primary-text-dark-bg); border-color: var(--accent-color); transform: translateY(-2px); }
+
+/* Footer Section */
+footer { background-color: var(--surface-color); text-align: center; padding: 4rem 5%; } /* Padding changed */
+footer h3 { font-size: 1.8rem; margin-bottom: 1rem; }
+footer p { color: var(--secondary-text-dark-bg); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+.footer-links a { color: var(--secondary-text-dark-bg); text-decoration: none; margin: 0 1rem; transition: color 0.3s ease; }
+.footer-links a:hover { color: var(--accent-color); }
+
+
+/* --- Detail View Styling (.view-detail) --- */
+.detail-header { display: flex; align-items: center; padding: 2rem 5%; border-bottom: 1px solid var(--border-color); } /* Padding changed */
+.back-button { color: var(--accent-color); text-decoration: none; font-size: 1.2rem; font-weight: 600; }
+.back-button i { margin-right: 10px; }
+.detail-header h3 { font-size: 1.5rem; margin-left: 2rem; }
+.detail-content { padding: 4rem 5%; max-width: 900px; margin: 0 auto; } /* Padding changed */
+.detail-content p { margin-bottom: 1.5rem; line-height: 1.8; color: var(--secondary-text-dark-bg); }
+.detail-content h4 { font-size: 1.5rem; margin: 2rem 0 1rem 0; color: var(--accent-color); }
+.detail-content ul { list-style: square; padding-left: 20px; }
+.detail-content img { width: 100%; border-radius: 8px; margin-bottom: 2rem; }
