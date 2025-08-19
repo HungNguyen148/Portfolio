@@ -3,32 +3,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const projectCardLinks = document.querySelectorAll('.project-card-link');
     const backButtons = document.querySelectorAll('.back-button');
 
-    // Hàm hiển thị một view chi tiết
+    // Function to show a specific project detail view
     function showDetailView(projectId) {
-        // Ẩn view danh sách dự án (trượt sang trái)
+        // Hide the main project list (slides it to the left)
         projectListView.classList.add('view-hidden');
         projectListView.classList.remove('view-active');
 
-        // Tìm và hiển thị view chi tiết tương ứng (trượt vào từ phải)
+        // Find and show the corresponding detail view (slides it in from the right)
         const detailView = document.getElementById(`view-${projectId}`);
         if (detailView) {
             detailView.classList.add('view-active');
         }
     }
 
-    // Hàm quay lại view danh sách dự án
+    // Function to return to the main project list view
     function showProjectListView() {
-        // Hiện lại view danh sách (trượt vào từ trái)
+        // Show the project list again (slides it in from the left)
         projectListView.classList.remove('view-hidden');
         projectListView.classList.add('view-active');
 
-        // Ẩn tất cả các view chi tiết (trượt sang phải)
+        // Hide all detail views (slides them to the right)
         document.querySelectorAll('.view-detail').forEach(view => {
             view.classList.remove('view-active');
         });
     }
 
-    // Gán sự kiện click cho mỗi thẻ dự án
+    // Assign a click event to each project card
     projectCardLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Gán sự kiện click cho tất cả các nút "Go Back"
+    // Assign a click event to all "Go Back" buttons
     backButtons.forEach(button => {
         button.addEventListener('click', (e) => {
             e.preventDefault();

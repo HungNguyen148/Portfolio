@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
 
     <div class="portfolio-container">
@@ -23,26 +21,19 @@
                     <p>Game Developer & Designer</p>
                 </div>
                 <nav class="main-nav">
-                    <a href="https://www.linkedin.com/in/dang-hung-nguyen-493aa4200/" target="_blank"><i
-                            class="fab fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/dang-hung-nguyen-493aa4200/" target="_blank"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/your-username" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="assets/NguyenDangHung_CV.pdf" class="resume-button" download>Resume <i
-                            class="fas fa-arrow-down"></i></a>
+                    <a href="assets/NguyenDangHung_CV.pdf" class="resume-button" download>Resume <i class="fas fa-arrow-down"></i></a>
                 </nav>
             </header>
-
+            
             <section id="hero">
                 <div class="hero-content">
                     <div class="profile-pic-container">
-                        <img src="assets/profile-picture.jpg" alt="Hung Dang Nguyen profile picture"
-                            class="profile-pic">
+                        <img src="assets/profile-picture.jpg" alt="Hung Dang Nguyen profile picture" class="profile-pic">
                     </div>
                     <p class="philosophy">
-                        With 3+ years in the industry, I am a full-spectrum game developer who brings ideas from concept
-                        to execution. My expertise covers the entire creative pipeline: from architecting a game's
-                        vision in a complete GDD, to preparing assets with humanoid rigging in Maya, building robust
-                        features with a deep knowledge of Unity's 3D engine, and adding the final polish with compelling
-                        VFX.
+                        A technical game designer and developer specializing in gameplay systems, focused on writing clean, efficient code and creating deeply immersive player experiences.
                     </p>
                 </div>
             </section>
@@ -54,24 +45,21 @@
                         <div class="project-card">
                             <img src="assets/dynasty-archer.gif" alt="Dynasty Archer Gameplay">
                             <h3>Dynasty Archer</h3>
-                            <p>Re-skinned and optimized the codebase, designed skill systems, and enhanced AI behaviors.
-                            </p>
+                            <p>Re-skinned and optimized the codebase, designed skill systems, and enhanced AI behaviors.</p>
                         </div>
                     </a>
                     <a href="#" class="project-card-link" data-project="heroes-survivors">
                         <div class="project-card">
                             <img src="assets/heroes-survivors.gif" alt="Heroes Survivors Gameplay">
                             <h3>Heroes Survivors</h3>
-                            <p>Developed unique character skills and VFX, balanced enemy waves for high replayability.
-                            </p>
+                            <p>Developed unique character skills and VFX, balanced enemy waves for high replayability.</p>
                         </div>
                     </a>
                     <a href="#" class="project-card-link" data-project="archer-hunter">
                         <div class="project-card">
                             <img src="assets/archer-hunter.gif" alt="Archer Hunter Gameplay">
                             <h3>Archer Hunter</h3>
-                            <p>Designed innovative character skills and created impactful VFX to enhance visual appeal.
-                            </p>
+                            <p>Designed innovative character skills and created impactful VFX to enhance visual appeal.</p>
                         </div>
                     </a>
                 </div>
@@ -105,10 +93,9 @@
                 </div>
             </section>
 
-            <footer id="contact">
+             <footer id="contact">
                 <h3>Want to know more?</h3>
-                <p>Feel free to reach out. You can find my contact information in my resume or message me on social
-                    media.</p>
+                <p>Feel free to reach out. You can find my contact information in my resume or message me on social media.</p>
                 <div class="footer-links">
                     <a href="mailto:ndanghung14895@gmail.com">ndanghung14895@gmail.com</a>
                     <a href="https://www.linkedin.com/in/dang-hung-nguyen-493aa4200/" target="_blank">LinkedIn</a>
@@ -122,41 +109,60 @@
                 <a href="#" class="back-button"><i class="fas fa-arrow-left"></i> Go Back</a>
                 <h3>Dynasty Archer</h3>
             </header>
+            
             <div class="detail-content">
-                <p>Detailed information about Dynasty Archer will go here. We can add more screenshots, GIFs of specific
-                    features, and in-depth explanations of the challenges and solutions.</p>
-                <img src="assets/dynasty-archer.gif" alt="Dynasty Archer Gameplay Detail">
-                <h4>Contributions:</h4>
-                <ul>
-                    <li>Re-skinned and optimized the codebase from the original project.</li>
-                    <li>Designed and balanced the skill systems for over 10 unique characters.</li>
-                    <li>Enhanced AI behaviors for mobs and bosses to create rewarding challenges.</li>
-                    <li>Created and integrated custom VFX for all new character skills.</li>
-                </ul>
+                <div class="detail-media-container">
+                    <img src="assets/dynasty-archer.gif" alt="Dynasty Archer detailed gameplay">
+                </div>
+
+                <div class="detail-main-content">
+                    <div class="detail-left-column">
+                        <div class="detail-section">
+                            <h4>About</h4>
+                            <p>Dynasty Archers is a journey through the historical battles of the Three Kingdoms era, where you will overcome challenges and perils with an extraordinary set of skills and weapons. Starting as a newcomer, you will be trained to master skills and become an unparalleled military commander, facing down armies and epic bosses alone.</p>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Introduction</h4>
+                            <p>This project was a comprehensive overhaul of a pre-existing title, with the core mission of transforming it with a new thematic identity and significantly enhanced gameplay systems to boost long-term player retention. My role was central to this evolution, spanning both technical engineering and creative design.</p>
+                            <p>A primary technical challenge was delivering high-fidelity visuals and complex, multi-layered gameplay on a wide range of mobile devices. The new, visually rich VFX for character skills caused significant performance drops during intense combat scenes. Instead of constantly instantiating and destroying particle effects—a costly operation that causes garbage collection spikes and stuttering—I engineered a robust <strong>object pooling system</strong>. This resulted in a dramatically smoother gameplay experience, maintaining a stable 60 FPS even when hundreds of particles were on-screen.</p>
+                            <p>From a design perspective, my focus was on architecting a scalable character skill system that allowed for deep strategic variety. I designed and balanced the core mechanics, stats, and synergistic interactions for all new character skills and overhauled the AI for mobs and bosses, implementing varied attack patterns and decision-making heuristics to create more dynamic and challenging encounters. This project taught me the critical importance of performance profiling early and often, solidifying a "performance-by-design" mindset that I now apply to all my work.</p>
+                        </div>
+                    </div>
+                    <div class="detail-right-column">
+                        <div class="project-info-card">
+                            <h4>Project Info</h4>
+                            <ul>
+                                <li><i class="fas fa-user-tie"></i> <strong>Role:</strong> Game Developer & Designer</li>
+                                <li><i class="fas fa-users"></i> <strong>Team Size:</strong> 5-10</li>
+                                <li><i class="fas fa-clock"></i> <strong>Time frame:</strong> 2022 - Present</li>
+                                <li><i class="fas fa-cogs"></i> <strong>Engine:</strong> Unity</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div id="view-heroes-survivors" class="view view-detail">
-            <header class="detail-header">
+             <header class="detail-header">
                 <a href="#" class="back-button"><i class="fas fa-arrow-left"></i> Go Back</a>
                 <h3>Heroes Survivors</h3>
             </header>
             <div class="detail-content">
-                <p>Detailed information about Heroes Survivors...</p>
+                 <p>Detailed information about Heroes Survivors will go here.</p>
             </div>
         </div>
-        <div id="view-archer-hunter" class="view view-detail">
-            <header class="detail-header">
+         <div id="view-archer-hunter" class="view view-detail">
+             <header class="detail-header">
                 <a href="#" class="back-button"><i class="fas fa-arrow-left"></i> Go Back</a>
                 <h3>Archer Hunter</h3>
             </header>
             <div class="detail-content">
-                <p>Detailed information about Archer Hunter...</p>
+                 <p>Detailed information about Archer Hunter will go here.</p>
             </div>
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
-
 </html>
