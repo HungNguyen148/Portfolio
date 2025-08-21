@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +11,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
 
     <div class="portfolio-container">
 
+        <!-- VIEW 1: MAIN CONTENT (SHOWN BY DEFAULT) -->
         <div id="view-project-list" class="view view-active">
             <header class="main-header">
                 <div class="logo">
@@ -21,19 +24,27 @@
                     <p>Game Developer & Designer</p>
                 </div>
                 <nav class="main-nav">
-                    <a href="https://www.linkedin.com/in/dang-hung-nguyen-493aa4200/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/dang-hung-nguyen-493aa4200/" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/your-username" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="assets/NguyenDangHung_CV.pdf" class="resume-button" download>Resume <i class="fas fa-arrow-down"></i></a>
+                    <a href="assets/NguyenDangHung_CV.pdf" class="resume-button" download>Resume <i
+                            class="fas fa-arrow-down"></i></a>
                 </nav>
             </header>
-            
+
             <section id="hero">
                 <div class="hero-content">
                     <div class="profile-pic-container">
-                        <img src="assets/profile-picture.jpg" alt="Hung Dang Nguyen profile picture" class="profile-pic">
+                        <img src="assets/profile-picture.jpg" alt="Hung Dang Nguyen profile picture"
+                            class="profile-pic">
                     </div>
                     <p class="philosophy">
-                        A technical game designer and developer specializing in gameplay systems, focused on writing clean, efficient code and creating deeply immersive player experiences.
+                        A hybrid Game Developer and Designer with over three years of experience specializing in mobile
+                        Action-Roguelike games. I architect engaging gameplay—from intricate skill systems to
+                        challenging AI—while writing the clean, optimized code required to guarantee a stable 60-FPS
+                        experience. My skillset extends into the 3D pipeline with a working knowledge of Unity VFX,
+                        shaders, and humanoid rigging in Maya. This dual expertise allows me to build features that are
+                        both creatively ambitious and technically robust from their inception.
                     </p>
                 </div>
             </section>
@@ -45,21 +56,24 @@
                         <div class="project-card">
                             <img src="assets/dynasty-archer.gif" alt="Dynasty Archer Gameplay">
                             <h3>Dynasty Archer</h3>
-                            <p>Re-skinned and optimized the codebase, designed skill systems, and enhanced AI behaviors.</p>
+                            <p>Re-skinned and optimized the codebase, designed skill systems, and enhanced AI behaviors.
+                            </p>
                         </div>
                     </a>
                     <a href="#" class="project-card-link" data-project="heroes-survivors">
                         <div class="project-card">
-                            <img src="assets/heroes-survivors.gif" alt="Heroes Survivors Gameplay">
-                            <h3>Heroes Survivors</h3>
-                            <p>Developed unique character skills and VFX, balanced enemy waves for high replayability.</p>
+                            <img src="assets/heroes-survivors.gif" alt="Hero Survivors Gameplay">
+                            <h3>Hero Survivors</h3>
+                            <p>Developed unique character skills and VFX, balanced enemy waves for high replayability.
+                            </p>
                         </div>
                     </a>
                     <a href="#" class="project-card-link" data-project="archer-hunter">
                         <div class="project-card">
                             <img src="assets/archer-hunter.gif" alt="Archer Hunter Gameplay">
                             <h3>Archer Hunter</h3>
-                            <p>Designed innovative character skills and created impactful VFX to enhance visual appeal.</p>
+                            <p>Designed innovative character skills and created impactful VFX to enhance visual appeal.
+                            </p>
                         </div>
                     </a>
                 </div>
@@ -93,9 +107,10 @@
                 </div>
             </section>
 
-             <footer id="contact">
+            <footer id="contact">
                 <h3>Want to know more?</h3>
-                <p>Feel free to reach out. You can find my contact information in my resume or message me on social media.</p>
+                <p>Feel free to reach out. You can find my contact information in my resume or message me on social
+                    media.</p>
                 <div class="footer-links">
                     <a href="mailto:ndanghung14895@gmail.com">ndanghung14895@gmail.com</a>
                     <a href="https://www.linkedin.com/in/dang-hung-nguyen-493aa4200/" target="_blank">LinkedIn</a>
@@ -104,6 +119,7 @@
             </footer>
         </div>
 
+        <!-- VIEW 2: DYNASTY ARCHER DETAILS -->
         <div id="view-dynasty-archer" class="view view-detail">
             <header class="detail-header">
                 <a href="#" class="back-button"><i class="fas fa-arrow-left"></i> Go Back</a>
@@ -116,7 +132,10 @@
                 <div class="detail-top-grid">
                     <div class="detail-card">
                         <h4>About</h4>
-                        <p>Dynasty Archers is a journey through the historical battles of the Three Kingdoms era, where you will overcome challenges and perils with an extraordinary set of skills and weapons. Starting as a newcomer, you will be trained to master skills and become an unparalleled military commander, facing down armies and epic bosses alone.</p>
+                        <p>Dynasty Archers is a journey through the historical battles of the Three Kingdoms era, where
+                            you will overcome challenges and perils with an extraordinary set of skills and weapons.
+                            Starting as a newcomer, you will be trained to master skills and become an unparalleled
+                            military commander, facing down armies and epic bosses alone.</p>
                     </div>
                     <div class="detail-card project-info-card">
                         <h4>Project Info</h4>
@@ -131,18 +150,70 @@
                 <div class="detail-main-text">
                     <div class="detail-section">
                         <h4>Development Deep Dive</h4>
-                        <p>This project was a comprehensive overhaul of a pre-existing title, with the core mission of transforming it with a new thematic identity and significantly enhanced gameplay systems to boost long-term player retention. My role was central to this evolution, spanning the full spectrum of both technical engineering and creative design.</p>
-                        <p>From a design perspective, my focus was on architecting a scalable character skill system that allowed for deep strategic variety. I designed and balanced the core mechanics, stats, and synergistic interactions for all new character skills. A significant part of this process involved overhauling the AI for all mobs and bosses, implementing varied attack patterns, movement logic, and decision-making heuristics to create more dynamic, unpredictable, and challenging encounters. I also meticulously balanced the in-game economy by tuning resource drops and difficulty curves across multiple chapters to ensure a fair yet rewarding player progression.</p>
-                        <p>Technically, a primary challenge was delivering high-fidelity visuals on a wide range of mobile devices. The new, visually rich VFX for character skills caused significant performance drops during intense combat scenes. Instead of constantly instantiating and destroying particle effects—a costly operation that causes garbage collection spikes and stuttering—I engineered a robust <strong>object pooling system</strong>. This resulted in a dramatically smoother gameplay experience, maintaining a stable 60 FPS even when hundreds of particles were on-screen. This project taught me the critical importance of performance profiling early and often, solidifying a "performance-by-design" mindset that I now apply to all my work.</p>
+                        <p>This project was a comprehensive overhaul of a pre-existing title, with the core mission of
+                            transforming it with a new thematic identity and significantly enhanced gameplay systems to
+                            boost long-term player retention. My role was central to this evolution, spanning the full
+                            spectrum of both technical engineering and creative design.</p>
+                        <p>From a design perspective, my focus was on architecting a scalable character skill system
+                            that allowed for deep strategic variety. I designed and balanced the core mechanics, stats,
+                            and synergistic interactions for all new character skills. A significant part of this
+                            process involved overhauling the AI for all mobs and bosses, implementing varied attack
+                            patterns, movement logic, and decision-making heuristics to create more dynamic,
+                            unpredictable, and challenging encounters. I also meticulously balanced the in-game economy
+                            by tuning resource drops and difficulty curves across multiple chapters to ensure a fair yet
+                            rewarding player progression.</p>
+                        <p>Technically, a primary challenge was delivering high-fidelity visuals on a wide range of
+                            mobile devices. The new, visually rich VFX for character skills caused significant
+                            performance drops during intense combat scenes. Instead of constantly instantiating and
+                            destroying particle effects—a costly operation that causes garbage collection spikes and
+                            stuttering—I engineered a robust <strong>object pooling system</strong>. This resulted in a
+                            dramatically smoother gameplay experience, maintaining a stable 60 FPS even when hundreds of
+                            particles were on-screen. This project taught me the critical importance of performance
+                            profiling early and often, solidifying a "performance-by-design" mindset that I now apply to
+                            all my work.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h4>My Contributions</h4>
+                        <p>As a hybrid developer and designer, I was responsible for both re-engineering core systems
+                            and shaping the player experience.</p>
+                        <h5 class="contribution-subtitle">As a Game Developer:</h5>
+                        <ul>
+                            <li><strong>Codebase Refactoring & Optimization:</strong> Took ownership of the original
+                                codebase to perform a significant reskin and refactor, which involved optimizing
+                                critical game loops, reducing memory allocation, and restructuring code for better
+                                scalability.</li>
+                            <li><strong>Advanced AI Behavior:</strong> Enhanced the AI for both standard mobs and bosses
+                                by implementing a state machine, allowing enemies to have varied attack patterns and
+                                react dynamically to player positions.</li>
+                            <li><strong>VFX Integration:</strong> Created and integrated custom Visual Effects (VFX) for
+                                all new character skills using Unity's particle system, ensuring they were both visually
+                                impactful and performance-friendly.</li>
+                            <li><strong>UI Implementation & Logic:</strong> Developed the complete user interface from
+                                design mockups, writing C# scripts to manage all UI functionalities, connect UI elements
+                                to backend game systems, and ensure responsiveness across diverse screen sizes.</li>
+                        </ul>
+                        <h5 class="contribution-subtitle">As a Game Designer:</h5>
+                        <ul>
+                            <li><strong>Skill System Design:</strong> Designed and balanced the entire skill system for
+                                over 10 unique playable characters, creating distinct gameplay mechanics and defining a
+                                clear progression path for each.</li>
+                            <li><strong>Gameplay & Combat Balancing:</strong> Meticulously fine-tuned combat parameters,
+                                including player damage, enemy health scaling, and skill cooldowns to create a
+                                challenging yet rewarding experience.</li>
+                            <li><strong>User Experience Enhancement:</strong> Analyzed player feedback to identify pain
+                                points and subsequently designed key improvements, such as clearer visual cues for enemy
+                                attacks and a more intuitive UI for skill selection.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- VIEW 3: HERO SURVIVORS DETAILS (NEWLY ADDED) -->
         <div id="view-heroes-survivors" class="view view-detail">
-             <header class="detail-header">
+            <header class="detail-header">
                 <a href="#" class="back-button"><i class="fas fa-arrow-left"></i> Go Back</a>
-                <h3>Heroes Survivors</h3>
+                <h3>Hero Survivors</h3>
             </header>
             <div class="detail-content">
                 <div class="detail-media-container">
@@ -151,12 +222,15 @@
                 <div class="detail-top-grid">
                     <div class="detail-card">
                         <h4>About</h4>
-                        <p>Plunge into the ultimate fantasy survival arena in Heroes Survivors. As a lone hero, you are challenged to withstand an ever-growing horde of monsters in a relentless, action-packed onslaught. The core of the game is to survive against impossible odds by strategically choosing from an array of powerful skills and evolutions, creating unique and devastating builds in every run to become an unstoppable force.</p>
+                        <p>Hero Survivors is an intense, action-packed survival game where players face overwhelming
+                            hordes of monsters. The core challenge is to survive as long as possible by strategically
+                            choosing powerful, auto-firing abilities and creating devastating skill combinations to
+                            clear the screen of enemies.</p>
                     </div>
                     <div class="detail-card project-info-card">
                         <h4>Project Info</h4>
                         <ul>
-                            <li><i class="fas fa-user-tie"></i> <strong>Role:</strong> Game Developer, VFX Designer</li>
+                            <li><i class="fas fa-user-tie"></i> <strong>Role:</strong> Game Developer & Designer</li>
                             <li><i class="fas fa-users"></i> <strong>Team Size:</strong> 5-10</li>
                             <li><i class="fas fa-clock"></i> <strong>Time frame:</strong> 2023</li>
                             <li><i class="fas fa-cogs"></i> <strong>Engine:</strong> Unity</li>
@@ -166,16 +240,63 @@
                 <div class="detail-main-text">
                     <div class="detail-section">
                         <h4>Development Deep Dive</h4>
-                        <p>My primary responsibility on this project was designing the core player experience, focusing on character skills, enemy design, and overall game balance to create a compelling and addictive gameplay loop.</p>
-                        <p>The central challenge in the survivor genre is maintaining performance while rendering hundreds of enemies and projectiles simultaneously. A secondary challenge was designing skills that felt both unique and satisfyingly powerful to differentiate our game in a competitive market. To address performance, I developed a suite of highly optimized VFX using Unity's particle system, focusing on minimal draw calls and efficient texture usage. This ensured a smooth 60 FPS experience even during the most chaotic moments.</p>
-                        <p>On the design front, I created skills with unique synergies and clear visual language, allowing players to instantly recognize their power and make strategic choices on the fly. I meticulously balanced the difficulty curve by scripting monster wave patterns and fine-tuning boss behaviors to create a gameplay loop that is challenging but never feels unfair. This project was a deep dive into the "less is more" philosophy of game design and technical art; I learned how to create maximum gameplay impact with minimal performance cost, a crucial skill for mobile game development.</p>
+                        <p>The mission for Hero Survivors was to create a compelling and visually satisfying title
+                            within the popular "bullet heaven" survival genre, focusing on high replayability and a
+                            strong sense of power progression. My role was to design the core combat experience and
+                            ensure the game could technically handle the on-screen chaos inherent to the genre.</p>
+                        <p>From a design perspective, I focused on creating unique character skills that would be
+                            effective and satisfying in an auto-firing combat system. A significant part of my
+                            responsibility was the design and balancing of the monster wave system; I meticulously
+                            scripted the timing, composition, and intensity of enemy swarms to build a dynamic
+                            difficulty curve that was both challenging and fair. I also designed and fine-tuned the
+                            behaviors for all bosses to make them memorable encounters that tested the player's build
+                            and skills.</p>
+                        <p>The primary technical hurdle for this genre is maintaining smooth performance while rendering
+                            hundreds of independent enemies and projectiles simultaneously. My solution was to implement
+                            a comprehensive optimization strategy centered around object pooling for not just VFX, but
+                            also for enemies and loot drops. I also optimized the AI calculation loop to reduce its
+                            performance cost when scaled up to hundreds of agents. This technical foundation was
+                            critical to delivering a fluid, lag-free experience, even during the most chaotic late-game
+                            moments.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h4>My Contributions</h4>
+                        <p>My contributions involved designing the core combat feel and implementing the systems
+                            required to bring it to life.</p>
+                        <h5 class="contribution-subtitle">As a Game Developer:</h5>
+                        <ul>
+                            <li><strong>Monster Wave & Spawning System:</strong> Developed the system responsible for
+                                managing and spawning massive waves of monsters, scripting their timing and patterns to
+                                control the flow of gameplay.</li>
+                            <li><strong>Boss Behavior Scripting:</strong> Wrote the C# scripts to implement the unique
+                                AI, attack patterns, and special abilities for all in-game bosses.</li>
+                            <li><strong>Character Skill Implementation:</strong> Programmed the functionality for all
+                                unique character skills, translating design concepts into functional in-game mechanics.
+                            </li>
+                            <li><strong>Performance Optimization:</strong> Proactively identified and solved performance
+                                bottlenecks related to rendering a high number of on-screen enemies and effects,
+                                ensuring the game ran smoothly.</li>
+                        </ul>
+                        <h5 class="contribution-subtitle">As a Game Designer:</h5>
+                        <ul>
+                            <li><strong>Unique Skill Design:</strong> Conceptualized and designed a wide array of
+                                character skills tailored for the "survivor" genre, focusing on synergies and satisfying
+                                visual impact.</li>
+                            <li><strong>VFX Design & Creation:</strong> Designed and created captivating VFX for all
+                                character abilities and enemy effects, providing clear visual feedback to the player
+                                during chaotic combat.</li>
+                            <li><strong>Level & Encounter Balancing:</strong> Balanced the difficulty of chapter levels
+                                by fine-tuning monster stats, spawn rates, and boss encounters to create an engaging and
+                                replayable experience.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- VIEW 4: ARCHER HUNTER DETAILS -->
         <div id="view-archer-hunter" class="view view-detail">
-             <header class="detail-header">
+            <header class="detail-header">
                 <a href="#" class="back-button"><i class="fas fa-arrow-left"></i> Go Back</a>
                 <h3>Archer Hunter</h3>
             </header>
@@ -186,12 +307,14 @@
                 <div class="detail-top-grid">
                     <div class="detail-card">
                         <h4>About</h4>
-                        <p>Dive into a fantasy world as a legendary hero in Archer Hunter, an action-packed adventure that combines immersive offline play with stunning visuals. Players navigate treacherous dungeons, battling hordes of monsters and facing down formidable bosses. The game's core appeal lies in its dynamic skill system, allowing players to create thousands of unique combinations for a new experience in every run.</p>
+                        <p>Archer Hunter is an addictive, action-packed adventure game where you slay hordes of enemies
+                            with an amazing set of skills and weapons. Begin as a newbie archer, then build your skills
+                            and abilities to become the Master.</p>
                     </div>
                     <div class="detail-card project-info-card">
                         <h4>Project Info</h4>
                         <ul>
-                            <li><i class="fas fa-user-tie"></i> <strong>Role:</strong> Game Developer, VFX Creator</li>
+                            <li><i class="fas fa-user-tie"></i> <strong>Role:</strong> Game Developer & Designer</li>
                             <li><i class="fas fa-users"></i> <strong>Team Size:</strong> 5-10</li>
                             <li><i class="fas fa-clock"></i> <strong>Time frame:</strong> 2022</li>
                             <li><i class="fas fa-cogs"></i> <strong>Engine:</strong> Unity</li>
@@ -201,9 +324,54 @@
                 <div class="detail-main-text">
                     <div class="detail-section">
                         <h4>Development Deep Dive</h4>
-                        <p>My primary role on Archer Hunter was to elevate the game's visual feel and strategic depth by designing and implementing new character skills and their corresponding VFX.</p>
-                        <p>A key challenge was creating abilities that were not only visually impressive but also introduced novel gameplay mechanics that were easy for players to understand yet offered high strategic potential. For example, I designed a chain-lightning skill that required careful positioning to maximize its effect, encouraging players to think tactically about enemy groupings rather than just focusing on raw power.</p>
-                        <p>To bring these skills to life, I created a library of impactful VFX from scratch. The main technical hurdle was ensuring these effects were highly optimized to run smoothly during chaotic scenes with dozens of enemies on screen, preventing any frame rate drops that could disrupt the player's experience. This involved using efficient particle systems, texture atlasing, and shader optimizations within Unity. This project sharpened my ability to create visually stunning effects that directly enhance gameplay and perform efficiently on mobile hardware.</p>
+                        <p>As the original flagship title, the mission for Archer Hunter was to create a highly engaging
+                            and scalable roguelike experience from the ground up, built around an addictive core combat
+                            loop. My role was foundational, involving the architecture of core gameplay systems and
+                            establishing the technical groundwork to ensure a smooth, high-quality player experience.
+                        </p>
+                        <p>From a design perspective, I was responsible for architecting the game’s core systems. This
+                            began with designing a versatile character skill system that allowed for dynamic,
+                            procedurally-generated builds in each run. I developed the initial AI for a wide range of
+                            enemies, creating the fundamental behavior patterns that defined the game's challenge.
+                            Furthermore, I conceptualized the Player vs. Player (PVP) mode and the In-App Purchase (IAP)
+                            model, laying the groundwork for the game's long-term engagement and monetization
+                            strategies.</p>
+                        <p>Technically, our primary goal was to deliver high-fidelity visuals and effects on a wide
+                            range of mobile devices without compromising performance. The visually-intensive VFX for
+                            character skills presented a significant performance hurdle. To solve this proactively, I
+                            engineered a robust <strong>object pooling system</strong> as a core part of our
+                            architecture. Instead of constantly creating and destroying costly particle effects, this
+                            system recycled them efficiently. This foundational decision ensured we could maintain a
+                            stable 60 FPS during heavy combat, establishing a "performance-by-design" philosophy for the
+                            project from day one.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h4>My Contributions</h4>
+                        <p>As a hybrid developer and designer, I was responsible for architecting the game's
+                            foundational systems and shaping the initial player experience.</p>
+                        <h5 class="contribution-subtitle">As a Game Developer:</h5>
+                        <ul>
+                            <li><strong>Core Systems Architecture:</strong> Engineered the foundational gameplay
+                                systems, including the character controller and combat loop, ensuring a scalable and
+                                maintainable codebase from the start.</li>
+                            <li><strong>VFX Implementation:</strong> Created and integrated a library of custom,
+                                performance-friendly Visual Effects (VFX) for all initial character skills using Unity's
+                                particle system.</li>
+                            <li><strong>Feature Prototyping:</strong> Developed the initial prototypes for key game
+                                features, including the Player vs. Player (PVP) mode and the In-App Purchase (IAP)
+                                framework, to validate their technical feasibility.</li>
+                        </ul>
+                        <h5 class="contribution-subtitle">As a Game Designer:</h5>
+                        <ul>
+                            <li><strong>Initial Concept & GDD:</strong> Played a key role in architecting the game's
+                                vision and documenting it in the initial Game Design Document (GDD).</li>
+                            <li><strong>Foundational Skill System:</strong> Designed the initial versatile character
+                                skill system, focusing on creating dynamic, procedurally-generated builds for each run.
+                            </li>
+                            <li><strong>Fundamental AI Design:</strong> Developed the fundamental behavior patterns for
+                                a wide range of enemies, establishing the core challenge and feel of the game's combat.
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -213,4 +381,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

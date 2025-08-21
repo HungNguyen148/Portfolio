@@ -39,7 +39,7 @@ body {
 .profile-pic-container { position: relative; width: 156px; height: 156px; border-radius: 50%; flex-shrink: 0; }
 .profile-pic-container::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; border-radius: 50%; padding: 3px; background: conic-gradient(from 90deg, #6EE7B7, #00A3FF, #6EE7B7); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; }
 .profile-pic { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; position: relative; z-index: 2; }
-.philosophy { font-size: 1.6rem; font-weight: 500; max-width: 700px; line-height: 1.6; text-align: left; }
+.philosophy { font-size: 1.25rem; font-weight: 500; max-width: 700px; line-height: 1.6; text-align: left; }
 
 h2 { text-align: center; font-size: 2.8rem; margin-bottom: 4rem; font-weight: 700; color: var(--accent-color); }
 
@@ -71,7 +71,7 @@ footer p { color: var(--secondary-text-dark-bg); margin-bottom: 2rem; max-width:
 .footer-links a:hover { color: var(--accent-color); }
 
 
-/* --- NEW Detail View Styling --- */
+/* --- Detail View Styling --- */
 .detail-header { display: flex; align-items: center; padding: 2rem 5%; border-bottom: 1px solid var(--border-color); }
 .back-button { color: var(--accent-color); text-decoration: none; font-size: 1.2rem; font-weight: 600; }
 .back-button i { margin-right: 10px; }
@@ -122,6 +122,9 @@ footer p { color: var(--secondary-text-dark-bg); margin-bottom: 2rem; max-width:
     padding-top: 2rem;
     border-top: 1px solid var(--border-color);
 }
+.detail-main-text .detail-section {
+    margin-bottom: 3rem;
+}
 .detail-main-text h4 {
     font-size: 1.8rem;
     font-weight: 700;
@@ -133,4 +136,38 @@ footer p { color: var(--secondary-text-dark-bg); margin-bottom: 2rem; max-width:
     line-height: 1.8;
     color: var(--secondary-text-dark-bg);
     margin-bottom: 1rem;
-}   
+}
+
+/* --- NEW STYLES FOR CONTRIBUTIONS SECTION --- */
+.contribution-subtitle {
+    font-size: 1.3rem;
+    color: var(--primary-text-dark-bg);
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+.detail-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+.detail-section ul li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1.2rem;
+    color: var(--secondary-text-dark-bg);
+    line-height: 1.6;
+}
+.detail-section ul li::before {
+    content: '■';
+    position: absolute;
+    left: 0;
+    top: 0.35rem;
+    color: var(--accent-color);
+    font-size: 0.8rem;
+}
+.detail-section ul li strong {
+    color: var(--primary-text-dark-bg);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.25rem;
+}
