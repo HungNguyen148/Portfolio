@@ -105,8 +105,23 @@ body {
 
 /* --- Main View Styling --- */
 .main-header { display: flex; justify-content: space-between; align-items: center; padding: 2rem 5%; width: 100%; }
-.logo h3 { font-size: 1.5rem; color: var(--accent-color); }
-.logo p { color: var(--secondary-text-dark-bg); }
+.logo h3 { font-size: 1.5rem; color: var(--accent-color); margin-bottom: 0.25rem; }
+.logo p { color: var(--secondary-text-dark-bg); margin-bottom: 1rem; }
+.tagline {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--primary-text-dark-bg);
+    max-width: 800px;
+    line-height: 1.4;
+    margin: 0 auto 4rem;
+    text-align: center;
+    background: linear-gradient(135deg, #6EE7B7, #00A3FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    padding: 0 2rem;
+}
 .main-nav a { color: var(--secondary-text-dark-bg); text-decoration: none; margin-left: 1.5rem; font-size: 1.5rem; transition: color 0.3s ease; }
 .main-nav a:hover { color: var(--accent-color); }
 
