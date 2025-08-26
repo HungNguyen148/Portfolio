@@ -1,3 +1,50 @@
+/* --- Animations --- */
+@keyframes buttonBounce {
+    0%, 100% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(1.08);
+    }
+    80% {
+        transform: scale(0.98);
+    }
+}
+
+.resume-button,
+.download-cv,
+.back-button,
+.tech-tag {
+    transition: all 0.2s ease;
+}
+
+.resume-button:hover,
+.download-cv:hover,
+.back-button:hover,
+.tech-tag:hover {
+    animation: buttonBounce 0.6s ease-in-out;
+    color: var(--accent-color);
+    filter: brightness(1.1);
+}
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, transform;
+}
+
+/* Staggered animation delays for different sections */
+#projects.fade-in-section { transition-delay: 0.1s; }
+#education.fade-in-section { transition-delay: 0.2s; }
+#technical-experience.fade-in-section { transition-delay: 0.3s; }
+#about.fade-in-section { transition-delay: 0.4s; }
+footer.fade-in-section { transition-delay: 0.5s; }
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* --- Basic Setup & Color Variables --- */
 :root {
     --background-color: #111827;
@@ -144,6 +191,7 @@ body {
 .resume-button:hover {
     background-color: var(--accent-color);
     color: var(--background-color);
+    box-shadow: 0 4px 12px rgba(110, 231, 183, 0.3);
 }
 
 /* Hero Section */
@@ -222,16 +270,17 @@ h2::after {
     background-color: var(--background-color); 
     border-radius: 12px; 
     overflow: hidden; 
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease-in-out; 
     border: 1px solid var(--border-color); 
-    color: var(--primary-text-dark-bg); 
+    color: var(--primary-text-dark-bg);
+    transform: translateY(0) scale(1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .project-card:hover {
     border-color: var(--accent-color);
-    transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(110, 231, 183, 0.1);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
-.project-card:hover { transform: translateY(-5px); }
 .project-card img { width: 100%; height: 220px; object-fit: cover; display: block; }
 .project-card h3 { padding: 1.5rem 1.5rem 0.5rem 1.5rem; font-size: 1.5rem; }
 .project-card p { padding: 0 1.5rem 1.5rem 1.5rem; color: var(--secondary-text-dark-bg); }

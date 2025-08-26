@@ -1,4 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize fade-in sections
+    const fadeInSections = document.querySelectorAll('#projects, #about, #education, #technical-experience, footer');
+    
+    const fadeInObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                // Optional: stop observing after animation
+                // fadeInObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    });
+
+    fadeInSections.forEach(section => {
+        section.classList.add('fade-in-section');
+        fadeInObserver.observe(section);
+    });
     const projectListView = document.getElementById('view-project-list');
     const projectCardLinks = document.querySelectorAll('.project-card-link');
     const backButtons = document.querySelectorAll('.back-button');
