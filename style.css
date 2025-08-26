@@ -153,8 +153,8 @@ body {
 /* Profile Picture */
 .profile-pic-container {
     position: relative;
-    width: 260px;
-    height: 260px;
+    width: 320px;
+    height: 320px;
     border-radius: 50%;
     flex-shrink: 0;
     padding: 4px;
@@ -166,6 +166,7 @@ body {
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
+    object-position: center 90%;
     background-color: var(--background-color);
     border: 3px solid var(--background-color);
 }
