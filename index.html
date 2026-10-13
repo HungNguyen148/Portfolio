@@ -5,16 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hung Dang Nguyen - Game Developer & Designer</title>
+    <meta name="description"
+        content="Portfolio of Hung Dang Nguyen, a hybrid Game Developer and Designer with 4+ years of experience building mobile Action-Roguelike and Tower Defense games in Unity.">
+    <meta name="theme-color" content="#111827">
+
+    <!-- Social sharing preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Hung Dang Nguyen - Game Developer & Designer">
+    <meta property="og:description"
+        content="Designing the vision. Engineering the experience. Mobile Action-Roguelike and Tower Defense games built in Unity.">
+    <meta property="og:url" content="https://hungnguyen148.github.io/Portfolio/">
+    <meta property="og:image" content="https://hungnguyen148.github.io/Portfolio/assets/heroes-survivor-splash.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="512x512" href="./assets/favicon/gamepad-icon.png">
     <link rel="apple-touch-icon" sizes="512x512" href="./assets/favicon/gamepad-icon.png">
     <meta name="msapplication-TileImage" content="./assets/favicon/gamepad-icon.png">
     <meta name="msapplication-TileColor" content="#000000">
-    <link rel="stylesheet" href="style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons are decorative, so load them without blocking the first render -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </noscript>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -22,37 +41,29 @@
     <div class="portfolio-container">
 
         <!-- VIEW 1: MAIN CONTENT (SHOWN BY DEFAULT) -->
-        <div id="view-project-list" class="view view-active">
+        <main id="view-project-list" class="view view-active">
             <header class="main-header">
                 <div class="logo">
-                    <h3>Hung Dang Nguyen</h3>
+                    <h1>Hung Dang Nguyen</h1>
                     <p>Game Developer & Designer</p>
                 </div>
-                <nav class="main-nav">
-                    <a href="https://www.linkedin.com/in/dang-hung-nguyen-493aa4200/" target="_blank"><i
-                            class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/HungNguyen148" target="_blank"><i class="fab fa-github"></i></a>
-                    <button class="resume-button">Resume <i class="fas fa-eye"></i></button>
+                <nav class="main-nav" aria-label="Social links">
+                    <a href="https://www.linkedin.com/in/dang-hung-nguyen-493aa4200/" target="_blank"
+                        rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                    <a href="https://github.com/HungNguyen148" target="_blank" rel="noopener noreferrer"
+                        aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+                    <button type="button" class="resume-button" aria-haspopup="dialog" aria-controls="cv-modal">
+                        Resume <i class="fas fa-eye" aria-hidden="true"></i>
+                    </button>
                 </nav>
             </header>
 
-            <!-- CV Modal -->
-            <div id="cv-modal" class="modal">
-                <div class="modal-content">
-                    <span class="close-modal"><i class="fas fa-times"></i></span>
-                    <iframe src="assets/NguyenDangHung_CV.pdf" width="100%" height="100%" frameborder="0"></iframe>
-                    <a href="assets/NguyenDangHung_CV.pdf" class="download-cv" download>
-                        <i class="fas fa-download"></i> Download CV
-                    </a>
-                </div>
-            </div>
-
             <section id="hero">
-                <div class="tagline">Designing the vision. Engineering the experience.</div>
+                <p class="tagline">Designing the vision. Engineering the experience.</p>
                 <div class="hero-content">
                     <div class="profile-pic-container">
-                        <img src="assets/profile-picture.png" alt="Hung Dang Nguyen profile picture"
-                            class="profile-pic">
+                        <img src="assets/profile-picture.jpg" alt="Hung Dang Nguyen profile picture"
+                            class="profile-pic" width="640" height="937">
                     </div>
                     <p class="philosophy">
                         A hybrid Game Developer and Designer with over four years of experience specializing in mobile
@@ -68,42 +79,45 @@
             <section id="projects">
                 <h2>Projects</h2>
                 <div class="project-grid">
-                    <a href="#" class="project-card-link" data-project="dynasty-archer">
-                        <div class="project-card">
-                            <img src="assets/dynasty-archer-splash.png" alt="Dynasty Archer Splash Art">
+                    <a href="#dynasty-archer" class="project-card-link">
+                        <article class="project-card">
+                            <img src="assets/dynasty-archer-splash.jpg" alt="Dynasty Archer splash art"
+                                width="1024" height="500" loading="lazy">
                             <h3>Dynasty Archer</h3>
                             <p>Revitalized a classic title with a new thematic identity, overhauling its core systems
                                 from skill design and AI behavior to codebase optimization.
                             </p>
-                        </div>
+                        </article>
                     </a>
-                    <a href="#" class="project-card-link" data-project="heroes-survivor">
-                        <div class="project-card">
-                            <img src="assets/heroes-survivor-splash.png" alt="Heroes Survivor Splash Art">
+                    <a href="#heroes-survivor" class="project-card-link">
+                        <article class="project-card">
+                            <img src="assets/heroes-survivor-splash.jpg" alt="Heroes Survivor splash art"
+                                width="1200" height="675" loading="lazy">
                             <h3>Heroes Survivor</h3>
-                            <p>Architected the foundational gameplay for a flagship roguelike title, focusing on
-                                innovative character skill design and spectacular VFX to create an addictive combat
-                                loop.
+                            <p>Designed the core combat of a "bullet heaven" survival game, from monster wave systems
+                                and boss behaviors to spectacular, performance-friendly VFX.
                             </p>
-                        </div>
+                        </article>
                     </a>
-                    <a href="#" class="project-card-link" data-project="archer-hunter">
-                        <div class="project-card">
-                            <img src="assets/archer-hunter-splash.png" alt="Archer Hunter Splash Art">
+                    <a href="#archer-hunter" class="project-card-link">
+                        <article class="project-card">
+                            <img src="assets/archer-hunter-splash.jpg" alt="Archer Hunter splash art"
+                                width="1182" height="605" loading="lazy">
                             <h3>Archer Hunter</h3>
-                            <p>ed the complete design of a strategic Hero Tower Defense game, architecting its deep
-                                progression systems and core gameplay from the ground up.
+                            <p>Architected the foundational gameplay for a flagship roguelike title, from a versatile
+                                skill system and enemy AI to the first PVP and IAP prototypes.
                             </p>
-                        </div>
+                        </article>
                     </a>
-                    <a href="#" class="project-card-link" data-project="samkok-td">
-                        <div class="project-card">
-                            <img src="assets/samkok-td-splash.png" alt="Samkok Heroes TD Splash Art">
+                    <a href="#samkok-td" class="project-card-link">
+                        <article class="project-card">
+                            <img src="assets/samkok-td-splash.jpg" alt="Samkok Heroes TD splash art"
+                                width="768" height="1536" loading="lazy">
                             <h3>Samkok Heroes TD</h3>
                             <p>Led design and development of a strategic Hero Tower Defense game with deep progression
                                 systems.
                             </p>
-                        </div>
+                        </article>
                     </a>
                 </div>
             </section>
@@ -124,18 +138,18 @@
 
             <section id="technical-experience">
                 <h2>Technical Experience</h2>
-                <div class="tech-grid">
-                    <span class="tech-tag">C#</span>
-                    <span class="tech-tag">C++</span>
-                    <span class="tech-tag">Unity</span>
-                    <span class="tech-tag">Game Design</span>
-                    <span class="tech-tag">VFX</span>
-                    <span class="tech-tag">Maya</span>
-                    <span class="tech-tag">Git</span>
-                    <span class="tech-tag">Design Patterns</span>
-                    <span class="tech-tag">Azure Playfab</span>
-                    <span class="tech-tag">Firebase</span>
-                </div>
+                <ul class="tech-grid">
+                    <li class="tech-tag">C#</li>
+                    <li class="tech-tag">C++</li>
+                    <li class="tech-tag">Unity</li>
+                    <li class="tech-tag">Game Design</li>
+                    <li class="tech-tag">VFX</li>
+                    <li class="tech-tag">Maya</li>
+                    <li class="tech-tag">Git</li>
+                    <li class="tech-tag">Design Patterns</li>
+                    <li class="tech-tag">Azure Playfab</li>
+                    <li class="tech-tag">Firebase</li>
+                </ul>
             </section>
 
             <footer id="contact">
@@ -144,79 +158,78 @@
                     media.</p>
                 <div class="footer-links">
                     <a href="mailto:ndanghung14895@gmail.com">ndanghung14895@gmail.com</a>
-                    <a href="https://www.linkedin.com/in/dang-hung-nguyen-493aa4200/" target="_blank">LinkedIn</a>
-                    <a href="https://github.com/HungNguyen148" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/dang-hung-nguyen-493aa4200/" target="_blank"
+                        rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://github.com/HungNguyen148" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </footer>
-        </div>
+        </main>
 
         <!-- VIEW 2: DYNASTY ARCHER DETAILS -->
-        <div id="view-dynasty-archer" class="view view-detail">
+        <article id="view-dynasty-archer" class="view view-detail" aria-labelledby="title-dynasty-archer" inert>
             <header class="detail-header">
-                <a href="#" class="back-button"><i class="fas fa-arrow-left"></i> Go Back</a>
-                <h3>Dynasty Archer</h3>
+                <a href="#" class="back-button"><i class="fas fa-arrow-left" aria-hidden="true"></i> Go Back</a>
+                <h2 id="title-dynasty-archer">Dynasty Archer</h2>
             </header>
             <div class="detail-content">
                 <div class="detail-media-showcase">
-                    <!-- Main display area -->
-                    <div class="media-main">
-                        <div class="media-item active" data-type="video"
-                            data-src="https://www.youtube.com/embed/Hefh9Z70z1U">
-                            <iframe src="https://www.youtube.com/embed/Hefh9Z70z1U" title="Dynasty Archer Gameplay"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-                    </div>
-
-                    <!-- Thumbnail strip -->
-                    <div class="media-strip">
-                        <div class="media-thumbnail active" data-type="video"
-                            data-src="https://www.youtube.com/embed/Hefh9Z70z1U">
-                            <img src="https://img.youtube.com/vi/Hefh9Z70z1U/maxresdefault.jpg"
-                                alt="Dynasty Archer Gameplay Video">
-                            <div class="play-icon"><i class="fas fa-play"></i></div>
-                        </div>
-                        <div class="media-thumbnail" data-type="image" data-src="assets/dynasty-archer/gameplay1.gif">
-                            <img src="assets/dynasty-archer/gameplay1.gif" alt="Gameplay Screenshot 1">
-                        </div>
-                        <div class="media-thumbnail" data-type="image" data-src="assets/dynasty-archer/gameplay2.png">
-                            <img src="assets/dynasty-archer/gameplay2.png" alt="Gameplay Screenshot 2">
-                        </div>
-                        <div class="media-thumbnail" data-type="image" data-src="assets/dynasty-archer/gameplay3.png">
-                            <img src="assets/dynasty-archer/gameplay3.png" alt="Gameplay Screenshot 3">
-                        </div>
-                        <div class="media-thumbnail" data-type="image" data-src="assets/dynasty-archer/gameplay4.png">
-                            <img src="assets/dynasty-archer/gameplay4.png" alt="Gameplay Screenshot 4">
-                        </div>
-                        <div class="media-thumbnail" data-type="image" data-src="assets/dynasty-archer/gameplay5.png">
-                            <img src="assets/dynasty-archer/gameplay5.png" alt="Gameplay Screenshot 5">
-                        </div>
+                    <div class="media-main"></div>
+                    <div class="media-strip" aria-label="Dynasty Archer media">
+                        <button type="button" class="media-thumbnail" data-type="video"
+                            data-src="https://www.youtube.com/embed/Hefh9Z70z1U" data-title="Dynasty Archer gameplay video">
+                            <img src="https://img.youtube.com/vi/Hefh9Z70z1U/hqdefault.jpg"
+                                alt="Dynasty Archer gameplay video" loading="lazy">
+                            <span class="play-icon" aria-hidden="true"><i class="fas fa-play"></i></span>
+                        </button>
+                        <button type="button" class="media-thumbnail" data-type="image"
+                            data-src="assets/dynasty-archer/gameplay1.gif">
+                            <img src="assets/dynasty-archer/thumbs/gameplay1.jpg"
+                                alt="Dynasty Archer gameplay animation" loading="lazy">
+                        </button>
+                        <button type="button" class="media-thumbnail" data-type="image"
+                            data-src="assets/dynasty-archer/gameplay2.jpg">
+                            <img src="assets/dynasty-archer/thumbs/gameplay2.jpg"
+                                alt="Dynasty Archer gameplay screenshot 1" loading="lazy">
+                        </button>
+                        <button type="button" class="media-thumbnail" data-type="image"
+                            data-src="assets/dynasty-archer/gameplay3.jpg">
+                            <img src="assets/dynasty-archer/thumbs/gameplay3.jpg"
+                                alt="Dynasty Archer gameplay screenshot 2" loading="lazy">
+                        </button>
+                        <button type="button" class="media-thumbnail" data-type="image"
+                            data-src="assets/dynasty-archer/gameplay4.jpg">
+                            <img src="assets/dynasty-archer/thumbs/gameplay4.jpg"
+                                alt="Dynasty Archer gameplay screenshot 3" loading="lazy">
+                        </button>
+                        <button type="button" class="media-thumbnail" data-type="image"
+                            data-src="assets/dynasty-archer/gameplay5.jpg">
+                            <img src="assets/dynasty-archer/thumbs/gameplay5.jpg"
+                                alt="Dynasty Archer gameplay screenshot 4" loading="lazy">
+                        </button>
                     </div>
                 </div>
 
                 <div class="detail-top-grid">
                     <div class="detail-card">
-                        <h4>About</h4>
-                        <p>Dynasty Archers is a journey through the historical battles of the Three Kingdoms era, where
+                        <h3>About</h3>
+                        <p>Dynasty Archer is a journey through the historical battles of the Three Kingdoms era, where
                             you will overcome challenges and perils with an extraordinary set of skills and weapons.
                             Starting as a newcomer, you will be trained to master skills and become an unparalleled
                             military commander, facing down armies and epic bosses alone.</p>
                     </div>
                     <div class="detail-card project-info-card">
-                        <h4>Project Info</h4>
+                        <h3>Project Info</h3>
                         <ul>
-                            <li><i class="fas fa-user-tie"></i> <strong>Role:</strong> Game Developer & Designer</li>
-                            <li><i class="fas fa-users"></i> <strong>Team Size:</strong> 5-10</li>
-                            <li><i class="fas fa-clock"></i> <strong>Time frame:</strong> 2022 - Present</li>
-                            <li><i class="fas fa-cogs"></i> <strong>Engine:</strong> Unity</li>
+                            <li><i class="fas fa-user-tie" aria-hidden="true"></i> <strong>Role:</strong> Game Developer & Designer</li>
+                            <li><i class="fas fa-users" aria-hidden="true"></i> <strong>Team Size:</strong> 5-10</li>
+                            <li><i class="fas fa-clock" aria-hidden="true"></i> <strong>Time frame:</strong> 2022 - Present</li>
+                            <li><i class="fas fa-cogs" aria-hidden="true"></i> <strong>Engine:</strong> Unity</li>
                         </ul>
                     </div>
                 </div>
                 <div class="detail-main-text">
-                    <div class="detail-section">
-                        <h4>Development Deep Dive</h4>
+                    <section class="detail-section">
+                        <h3>Development Deep Dive</h3>
                         <p>This project was a comprehensive overhaul of a pre-existing title, with the core mission of
                             transforming it with a new thematic identity and significantly enhanced gameplay systems to
                             boost long-term player retention. My role was central to this evolution, spanning the full
@@ -238,12 +251,12 @@
                             particles were on-screen. This project taught me the critical importance of performance
                             profiling early and often, solidifying a "performance-by-design" mindset that I now apply to
                             all my work.</p>
-                    </div>
-                    <div class="detail-section">
-                        <h4>My Contributions</h4>
+                    </section>
+                    <section class="detail-section">
+                        <h3>My Contributions</h3>
                         <p>As a hybrid developer and designer, I was responsible for both re-engineering core systems
                             and shaping the player experience.</p>
-                        <h5 class="contribution-subtitle">As a Game Developer:</h5>
+                        <h4 class="contribution-subtitle">As a Game Developer:</h4>
                         <ul>
                             <li><strong>Codebase Refactoring & Optimization:</strong> Took ownership of the original
                                 codebase to perform a significant reskin and refactor, which involved optimizing
@@ -259,7 +272,7 @@
                                 design mockups, writing C# scripts to manage all UI functionalities, connect UI elements
                                 to backend game systems, and ensure responsiveness across diverse screen sizes.</li>
                         </ul>
-                        <h5 class="contribution-subtitle">As a Game Designer:</h5>
+                        <h4 class="contribution-subtitle">As a Game Designer:</h4>
                         <ul>
                             <li><strong>Skill System Design:</strong> Designed and balanced the entire skill system for
                                 over 10 unique playable characters, creating distinct gameplay mechanics and defining a
@@ -271,88 +284,71 @@
                                 points and subsequently designed key improvements, such as clearer visual cues for enemy
                                 attacks and a more intuitive UI for skill selection.</li>
                         </ul>
-                    </div>
+                    </section>
                 </div>
             </div>
-        </div>
+        </article>
 
-        <!-- VIEW 3: HEROES SURVIVOR DETAILS (NEWLY ADDED) -->
-        <div id="view-heroes-survivor" class="view view-detail">
+        <!-- VIEW 3: HEROES SURVIVOR DETAILS -->
+        <article id="view-heroes-survivor" class="view view-detail" aria-labelledby="title-heroes-survivor" inert>
             <header class="detail-header">
-                <a href="#" class="back-button"><i class="fas fa-arrow-left"></i> Go Back</a>
-                <h3>Heroes Survivor</h3>
+                <a href="#" class="back-button"><i class="fas fa-arrow-left" aria-hidden="true"></i> Go Back</a>
+                <h2 id="title-heroes-survivor">Heroes Survivor</h2>
             </header>
             <div class="detail-content">
-                <!-- Main video showcase -->
                 <div class="detail-media-showcase">
-                    <!-- Main display area -->
-                    <div class="media-main">
-                        <div class="media-item active" data-type="video"
-                            data-src="https://www.youtube.com/embed/8ioQ4Fj-8QE">
-                            <iframe src="https://www.youtube.com/embed/8ioQ4Fj-8QE" title="Project Gameplay Video"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-                        <div class="media-item" data-type="image" data-src="assets/heroes-survivor/gameplay1.png">
-                            <img src="assets/heroes-survivor/gameplay1.png" alt="Gameplay Screenshot 1">
-                        </div>
-                        <div class="media-item" data-type="image" data-src="assets/heroes-survivor/gameplay2.png">
-                            <img src="assets/heroes-survivor/gameplay2.png" alt="Gameplay Screenshot 2">
-                        </div>
-                        <div class="media-item" data-type="image" data-src="assets/heroes-survivor/gameplay3.png">
-                            <img src="assets/heroes-survivor/gameplay3.png" alt="Gameplay Screenshot 3">
-                        </div>
-                        <div class="media-item" data-type="image" data-src="assets/heroes-survivor/gameplay4.png">
-                            <img src="assets/heroes-survivor/gameplay4.png" alt="Gameplay Screenshot 4">
-                        </div>
-                    </div>
-
-                    <!-- Thumbnail strip -->
-                    <div class="media-strip">
-                        <div class="media-thumbnail active" data-type="video"
-                            data-src="https://www.youtube.com/embed/8ioQ4Fj-8QE">
-                            <img src="https://img.youtube.com/vi/8ioQ4Fj-8QE/maxresdefault.jpg"
-                                alt="Heroes Survivor Gameplay Video">
-                            <div class="play-icon"><i class="fas fa-play"></i></div>
-                        </div>
-                        <div class="media-thumbnail" data-type="image" data-src="assets/heroes-survivor/gameplay1.png">
-                            <img src="assets/heroes-survivor/gameplay1.png" alt="Gameplay Screenshot 1">
-                        </div>
-                        <div class="media-thumbnail" data-type="image" data-src="assets/heroes-survivor/gameplay2.png">
-                            <img src="assets/heroes-survivor/gameplay2.png" alt="Gameplay Screenshot 2">
-                        </div>
-                        <div class="media-thumbnail" data-type="image" data-src="assets/heroes-survivor/gameplay3.png">
-                            <img src="assets/heroes-survivor/gameplay3.png" alt="Gameplay Screenshot 3">
-                        </div>
-                        <div class="media-thumbnail" data-type="image" data-src="assets/heroes-survivor/gameplay4.png">
-                            <img src="assets/heroes-survivor/gameplay4.png" alt="Gameplay Screenshot 4">
-                        </div>
+                    <div class="media-main"></div>
+                    <div class="media-strip" aria-label="Heroes Survivor media">
+                        <button type="button" class="media-thumbnail" data-type="video"
+                            data-src="https://www.youtube.com/embed/8ioQ4Fj-8QE" data-title="Heroes Survivor gameplay video">
+                            <img src="https://img.youtube.com/vi/8ioQ4Fj-8QE/hqdefault.jpg"
+                                alt="Heroes Survivor gameplay video" loading="lazy">
+                            <span class="play-icon" aria-hidden="true"><i class="fas fa-play"></i></span>
+                        </button>
+                        <button type="button" class="media-thumbnail" data-type="image"
+                            data-src="assets/heroes-survivor/gameplay1.jpg">
+                            <img src="assets/heroes-survivor/thumbs/gameplay1.jpg"
+                                alt="Heroes Survivor gameplay screenshot 1" loading="lazy">
+                        </button>
+                        <button type="button" class="media-thumbnail" data-type="image"
+                            data-src="assets/heroes-survivor/gameplay2.jpg">
+                            <img src="assets/heroes-survivor/thumbs/gameplay2.jpg"
+                                alt="Heroes Survivor gameplay screenshot 2" loading="lazy">
+                        </button>
+                        <button type="button" class="media-thumbnail" data-type="image"
+                            data-src="assets/heroes-survivor/gameplay3.jpg">
+                            <img src="assets/heroes-survivor/thumbs/gameplay3.jpg"
+                                alt="Heroes Survivor gameplay screenshot 3" loading="lazy">
+                        </button>
+                        <button type="button" class="media-thumbnail" data-type="image"
+                            data-src="assets/heroes-survivor/gameplay4.jpg">
+                            <img src="assets/heroes-survivor/thumbs/gameplay4.jpg"
+                                alt="Heroes Survivor gameplay screenshot 4" loading="lazy">
+                        </button>
                     </div>
                 </div>
 
                 <div class="detail-top-grid">
                     <div class="detail-card">
-                        <h4>About</h4>
-                        <p>Hero Survivors is an intense, action-packed survival game where players face overwhelming
+                        <h3>About</h3>
+                        <p>Heroes Survivor is an intense, action-packed survival game where players face overwhelming
                             hordes of monsters. The core challenge is to survive as long as possible by strategically
                             choosing powerful, auto-firing abilities and creating devastating skill combinations to
                             clear the screen of enemies.</p>
                     </div>
                     <div class="detail-card project-info-card">
-                        <h4>Project Info</h4>
+                        <h3>Project Info</h3>
                         <ul>
-                            <li><i class="fas fa-user-tie"></i> <strong>Role:</strong> Game Developer & Designer</li>
-                            <li><i class="fas fa-users"></i> <strong>Team Size:</strong> 5-10</li>
-                            <li><i class="fas fa-clock"></i> <strong>Time frame:</strong> 2023</li>
-                            <li><i class="fas fa-cogs"></i> <strong>Engine:</strong> Unity</li>
+                            <li><i class="fas fa-user-tie" aria-hidden="true"></i> <strong>Role:</strong> Game Developer & Designer</li>
+                            <li><i class="fas fa-users" aria-hidden="true"></i> <strong>Team Size:</strong> 5-10</li>
+                            <li><i class="fas fa-clock" aria-hidden="true"></i> <strong>Time frame:</strong> 2023</li>
+                            <li><i class="fas fa-cogs" aria-hidden="true"></i> <strong>Engine:</strong> Unity</li>
                         </ul>
                     </div>
                 </div>
                 <div class="detail-main-text">
-                    <div class="detail-section">
-                        <h4>Development Deep Dive</h4>
+                    <section class="detail-section">
+                        <h3>Development Deep Dive</h3>
                         <p>The mission for Heroes Survivor was to create a compelling and visually satisfying title
                             within the popular "bullet heaven" survival genre, focusing on high replayability and a
                             strong sense of power progression. My role was to design the core combat experience and
@@ -371,12 +367,12 @@
                             performance cost when scaled up to hundreds of agents. This technical foundation was
                             critical to delivering a fluid, lag-free experience, even during the most chaotic late-game
                             moments.</p>
-                    </div>
-                    <div class="detail-section">
-                        <h4>My Contributions</h4>
+                    </section>
+                    <section class="detail-section">
+                        <h3>My Contributions</h3>
                         <p>My contributions involved designing the core combat feel and implementing the systems
                             required to bring it to life.</p>
-                        <h5 class="contribution-subtitle">As a Game Developer:</h5>
+                        <h4 class="contribution-subtitle">As a Game Developer:</h4>
                         <ul>
                             <li><strong>Monster Wave & Spawning System:</strong> Developed the system responsible for
                                 managing and spawning massive waves of monsters, scripting their timing and patterns to
@@ -390,7 +386,7 @@
                                 bottlenecks related to rendering a high number of on-screen enemies and effects,
                                 ensuring the game ran smoothly.</li>
                         </ul>
-                        <h5 class="contribution-subtitle">As a Game Designer:</h5>
+                        <h4 class="contribution-subtitle">As a Game Designer:</h4>
                         <ul>
                             <li><strong>Unique Skill Design:</strong> Conceptualized and designed a wide array of
                                 character skills tailored for the "survivor" genre, focusing on synergies and satisfying
@@ -402,91 +398,81 @@
                                 by fine-tuning monster stats, spawn rates, and boss encounters to create an engaging and
                                 replayable experience.</li>
                         </ul>
-                    </div>
+                    </section>
                 </div>
             </div>
-        </div>
+        </article>
 
         <!-- VIEW 4: ARCHER HUNTER DETAILS -->
-        <div id="view-archer-hunter" class="view view-detail">
+        <article id="view-archer-hunter" class="view view-detail" aria-labelledby="title-archer-hunter" inert>
             <header class="detail-header">
-                <a href="#" class="back-button"><i class="fas fa-arrow-left"></i> Go Back</a>
-                <h3>Archer Hunter</h3>
+                <a href="#" class="back-button"><i class="fas fa-arrow-left" aria-hidden="true"></i> Go Back</a>
+                <h2 id="title-archer-hunter">Archer Hunter</h2>
             </header>
             <div class="detail-content">
                 <div class="detail-media-showcase">
-                    <!-- Main display area -->
-                    <div class="media-main">
-                        <div class="media-item active" data-type="video"
-                            data-src="https://www.youtube.com/embed/iyIDwSrS_cw">
-                            <iframe src="https://www.youtube.com/embed/iyIDwSrS_cw"
-                                title="Archer Hunter Gameplay Video 1" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-                        <div class="media-item" data-type="video" data-src="https://www.youtube.com/embed/bmyfinfKwjU">
-                            <iframe src="https://www.youtube.com/embed/bmyfinfKwjU"
-                                title="Archer Hunter Gameplay Video 2" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-                    </div>
-
-                    <!-- Thumbnail strip -->
-                    <div class="media-strip">
-                        <div class="media-thumbnail active" data-type="video"
-                            data-src="https://www.youtube.com/embed/iyIDwSrS_cw">
-                            <img src="https://img.youtube.com/vi/iyIDwSrS_cw/maxresdefault.jpg"
-                                alt="Archer Hunter Gameplay Video 1">
-                            <div class="play-icon"><i class="fas fa-play"></i></div>
-                        </div>
-                        <div class="media-thumbnail" data-type="video"
-                            data-src="https://www.youtube.com/embed/bmyfinfKwjU">
-                            <img src="https://img.youtube.com/vi/bmyfinfKwjU/maxresdefault.jpg"
-                                alt="Archer Hunter Gameplay Video 2">
-                            <div class="play-icon"><i class="fas fa-play"></i></div>
-                        </div>
-
-                        <div class="media-thumbnail" data-type="image" data-src="assets/archer-hunter/gameplay1.gif">
-                            <img src="assets/archer-hunter/gameplay1.gif" alt="Gameplay Screenshot 1">
-                        </div>
-                        <div class="media-thumbnail" data-type="image" data-src="assets/archer-hunter/gameplay2.png">
-                            <img src="assets/archer-hunter/gameplay2.png" alt="Gameplay Screenshot 2">
-                        </div>
-                        <div class="media-thumbnail" data-type="image" data-src="assets/archer-hunter/gameplay3.png">
-                            <img src="assets/archer-hunter/gameplay3.png" alt="Gameplay Screenshot 3">
-                        </div>
-                        <div class="media-thumbnail" data-type="image" data-src="assets/archer-hunter/gameplay4.png">
-                            <img src="assets/archer-hunter/gameplay4.png" alt="Gameplay Screenshot 4">
-                        </div>
-                        <div class="media-thumbnail" data-type="image" data-src="assets/archer-hunter/gameplay5.png">
-                            <img src="assets/archer-hunter/gameplay5.png" alt="Gameplay Screenshot 5">
-                        </div>
+                    <div class="media-main"></div>
+                    <div class="media-strip" aria-label="Archer Hunter media">
+                        <button type="button" class="media-thumbnail" data-type="video"
+                            data-src="https://www.youtube.com/embed/iyIDwSrS_cw" data-title="Archer Hunter gameplay video 1">
+                            <img src="https://img.youtube.com/vi/iyIDwSrS_cw/hqdefault.jpg"
+                                alt="Archer Hunter gameplay video 1" loading="lazy">
+                            <span class="play-icon" aria-hidden="true"><i class="fas fa-play"></i></span>
+                        </button>
+                        <button type="button" class="media-thumbnail" data-type="video"
+                            data-src="https://www.youtube.com/embed/bmyfinfKwjU" data-title="Archer Hunter gameplay video 2">
+                            <img src="https://img.youtube.com/vi/bmyfinfKwjU/hqdefault.jpg"
+                                alt="Archer Hunter gameplay video 2" loading="lazy">
+                            <span class="play-icon" aria-hidden="true"><i class="fas fa-play"></i></span>
+                        </button>
+                        <button type="button" class="media-thumbnail" data-type="image"
+                            data-src="assets/archer-hunter/gameplay1.gif">
+                            <img src="assets/archer-hunter/thumbs/gameplay1.jpg"
+                                alt="Archer Hunter gameplay animation" loading="lazy">
+                        </button>
+                        <button type="button" class="media-thumbnail" data-type="image"
+                            data-src="assets/archer-hunter/gameplay2.jpg">
+                            <img src="assets/archer-hunter/thumbs/gameplay2.jpg"
+                                alt="Archer Hunter gameplay screenshot 1" loading="lazy">
+                        </button>
+                        <button type="button" class="media-thumbnail" data-type="image"
+                            data-src="assets/archer-hunter/gameplay3.jpg">
+                            <img src="assets/archer-hunter/thumbs/gameplay3.jpg"
+                                alt="Archer Hunter gameplay screenshot 2" loading="lazy">
+                        </button>
+                        <button type="button" class="media-thumbnail" data-type="image"
+                            data-src="assets/archer-hunter/gameplay4.jpg">
+                            <img src="assets/archer-hunter/thumbs/gameplay4.jpg"
+                                alt="Archer Hunter gameplay screenshot 3" loading="lazy">
+                        </button>
+                        <button type="button" class="media-thumbnail" data-type="image"
+                            data-src="assets/archer-hunter/gameplay5.jpg">
+                            <img src="assets/archer-hunter/thumbs/gameplay5.jpg"
+                                alt="Archer Hunter gameplay screenshot 4" loading="lazy">
+                        </button>
                     </div>
                 </div>
 
                 <div class="detail-top-grid">
                     <div class="detail-card">
-                        <h4>About</h4>
+                        <h3>About</h3>
                         <p>Archer Hunter is an addictive, action-packed adventure game where you slay hordes of enemies
                             with an amazing set of skills and weapons. Begin as a newbie archer, then build your skills
                             and abilities to become the Master.</p>
                     </div>
                     <div class="detail-card project-info-card">
-                        <h4>Project Info</h4>
+                        <h3>Project Info</h3>
                         <ul>
-                            <li><i class="fas fa-user-tie"></i> <strong>Role:</strong> Game Developer & Designer</li>
-                            <li><i class="fas fa-users"></i> <strong>Team Size:</strong> 5-10</li>
-                            <li><i class="fas fa-clock"></i> <strong>Time frame:</strong> 2022</li>
-                            <li><i class="fas fa-cogs"></i> <strong>Engine:</strong> Unity</li>
+                            <li><i class="fas fa-user-tie" aria-hidden="true"></i> <strong>Role:</strong> Game Developer & Designer</li>
+                            <li><i class="fas fa-users" aria-hidden="true"></i> <strong>Team Size:</strong> 5-10</li>
+                            <li><i class="fas fa-clock" aria-hidden="true"></i> <strong>Time frame:</strong> 2022</li>
+                            <li><i class="fas fa-cogs" aria-hidden="true"></i> <strong>Engine:</strong> Unity</li>
                         </ul>
                     </div>
                 </div>
                 <div class="detail-main-text">
-                    <div class="detail-section">
-                        <h4>Development Deep Dive</h4>
+                    <section class="detail-section">
+                        <h3>Development Deep Dive</h3>
                         <p>As the original flagship title, the mission for Archer Hunter was to create a highly engaging
                             and scalable roguelike experience from the ground up, built around an addictive core combat
                             loop. My role was foundational, involving the architecture of core gameplay systems and
@@ -507,12 +493,12 @@
                             system recycled them efficiently. This foundational decision ensured we could maintain a
                             stable 60 FPS during heavy combat, establishing a "performance-by-design" philosophy for the
                             project from day one.</p>
-                    </div>
-                    <div class="detail-section">
-                        <h4>My Contributions</h4>
+                    </section>
+                    <section class="detail-section">
+                        <h3>My Contributions</h3>
                         <p>As a hybrid developer and designer, I was responsible for architecting the game's
                             foundational systems and shaping the initial player experience.</p>
-                        <h5 class="contribution-subtitle">As a Game Developer:</h5>
+                        <h4 class="contribution-subtitle">As a Game Developer:</h4>
                         <ul>
                             <li><strong>Core Systems Architecture:</strong> Engineered the foundational gameplay
                                 systems, including the character controller and combat loop, ensuring a scalable and
@@ -524,7 +510,7 @@
                                 features, including the Player vs. Player (PVP) mode and the In-App Purchase (IAP)
                                 framework, to validate their technical feasibility.</li>
                         </ul>
-                        <h5 class="contribution-subtitle">As a Game Designer:</h5>
+                        <h4 class="contribution-subtitle">As a Game Designer:</h4>
                         <ul>
                             <li><strong>Initial Concept & GDD:</strong> Played a key role in architecting the game's
                                 vision and documenting it in the initial Game Design Document (GDD).</li>
@@ -535,69 +521,73 @@
                                 a wide range of enemies, establishing the core challenge and feel of the game's combat.
                             </li>
                         </ul>
-                    </div>
+                    </section>
                 </div>
             </div>
-        </div>
+        </article>
 
-        <!-- VIEW 5: SAMKOK HEROES TD DETAILS (NEWLY ADDED) -->
-        <div id="view-samkok-td" class="view view-detail">
+        <!-- VIEW 5: SAMKOK HEROES TD DETAILS -->
+        <article id="view-samkok-td" class="view view-detail" aria-labelledby="title-samkok-td" inert>
             <header class="detail-header">
-                <a href="#" class="back-button"><i class="fas fa-arrow-left"></i> Go Back</a>
-                <h3>Samkok Heroes TD</h3>
+                <a href="#" class="back-button"><i class="fas fa-arrow-left" aria-hidden="true"></i> Go Back</a>
+                <h2 id="title-samkok-td">Samkok Heroes TD</h2>
             </header>
             <div class="detail-content">
                 <div class="detail-media-showcase">
-                    <!-- Main display area -->
-                    <div class="media-main">
-                        <div class="media-item active" data-type="video"
-                            data-src="https://www.youtube.com/embed/2iSg3ylWNTI">
-                            <iframe src="https://www.youtube.com/embed/2iSg3ylWNTI" title="Samkok Heroes TD Gameplay"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-                    </div>
-
-                    <!-- Thumbnail strip -->
-                    <div class="media-strip">
-                        <div class="media-thumbnail active" data-type="video"
-                            data-src="https://www.youtube.com/embed/2iSg3ylWNTI">
-                            <img src="https://img.youtube.com/vi/2iSg3ylWNTI/maxresdefault.jpg"
-                                alt="Samkok Heroes TD Gameplay Video">
-                            <div class="play-icon"><i class="fas fa-play"></i></div>
-                        </div>
-                        <div class="media-thumbnail" data-type="image" data-src="assets/samkok-td/gameplay1.PNG">
-                            <img src="assets/samkok-td/gameplay1.PNG" alt="Gameplay Screenshot">
-                        </div>
-                        <div class="media-thumbnail" data-type="image" data-src="assets/samkok-td/gameplay2.PNG">
-                            <img src="assets/samkok-td/gameplay2.PNG" alt="Gameplay Screenshot">
-                        </div>
-                        <div class="media-thumbnail" data-type="image" data-src="assets/samkok-td/gameplay3.PNG">
-                            <img src="assets/samkok-td/gameplay3.PNG" alt="Gameplay Screenshot">
-                        </div>
-                        <div class="media-thumbnail" data-type="image" data-src="assets/samkok-td/gameplay4.PNG">
-                            <img src="assets/samkok-td/gameplay4.PNG" alt="HGameplay Screenshot">
-                        </div>
-                        <div class="media-thumbnail" data-type="image" data-src="assets/samkok-td/gameplay5.PNG">
-                            <img src="assets/samkok-td/gameplay5.PNG" alt="Gameplay Screenshot">
-                        </div>
-                        <div class="media-thumbnail" data-type="image" data-src="assets/samkok-td/gameplay6.PNG">
-                            <img src="assets/samkok-td/gameplay6.PNG" alt="Gameplay Screenshot">
-                        </div>
-                        <div class="media-thumbnail" data-type="image" data-src="assets/samkok-td/gameplay7.PNG">
-                            <img src="assets/samkok-td/gameplay7.PNG" alt="Gameplay Screenshot">
-                        </div>
-                        <div class="media-thumbnail" data-type="image" data-src="assets/samkok-td/gameplay8.PNG">
-                            <img src="assets/samkok-td/gameplay8.PNG" alt="Gameplay Screenshot">
-                        </div>
+                    <div class="media-main"></div>
+                    <div class="media-strip" aria-label="Samkok Heroes TD media">
+                        <button type="button" class="media-thumbnail" data-type="video"
+                            data-src="https://www.youtube.com/embed/2iSg3ylWNTI" data-title="Samkok Heroes TD gameplay video">
+                            <img src="https://img.youtube.com/vi/2iSg3ylWNTI/hqdefault.jpg"
+                                alt="Samkok Heroes TD gameplay video" loading="lazy">
+                            <span class="play-icon" aria-hidden="true"><i class="fas fa-play"></i></span>
+                        </button>
+                        <button type="button" class="media-thumbnail" data-type="image"
+                            data-src="assets/samkok-td/gameplay1.jpg">
+                            <img src="assets/samkok-td/thumbs/gameplay1.jpg"
+                                alt="Samkok Heroes TD gameplay screenshot 1" loading="lazy">
+                        </button>
+                        <button type="button" class="media-thumbnail" data-type="image"
+                            data-src="assets/samkok-td/gameplay2.jpg">
+                            <img src="assets/samkok-td/thumbs/gameplay2.jpg"
+                                alt="Samkok Heroes TD gameplay screenshot 2" loading="lazy">
+                        </button>
+                        <button type="button" class="media-thumbnail" data-type="image"
+                            data-src="assets/samkok-td/gameplay3.jpg">
+                            <img src="assets/samkok-td/thumbs/gameplay3.jpg"
+                                alt="Samkok Heroes TD gameplay screenshot 3" loading="lazy">
+                        </button>
+                        <button type="button" class="media-thumbnail" data-type="image"
+                            data-src="assets/samkok-td/gameplay4.jpg">
+                            <img src="assets/samkok-td/thumbs/gameplay4.jpg"
+                                alt="Samkok Heroes TD gameplay screenshot 4" loading="lazy">
+                        </button>
+                        <button type="button" class="media-thumbnail" data-type="image"
+                            data-src="assets/samkok-td/gameplay5.jpg">
+                            <img src="assets/samkok-td/thumbs/gameplay5.jpg"
+                                alt="Samkok Heroes TD gameplay screenshot 5" loading="lazy">
+                        </button>
+                        <button type="button" class="media-thumbnail" data-type="image"
+                            data-src="assets/samkok-td/gameplay6.jpg">
+                            <img src="assets/samkok-td/thumbs/gameplay6.jpg"
+                                alt="Samkok Heroes TD gameplay screenshot 6" loading="lazy">
+                        </button>
+                        <button type="button" class="media-thumbnail" data-type="image"
+                            data-src="assets/samkok-td/gameplay7.jpg">
+                            <img src="assets/samkok-td/thumbs/gameplay7.jpg"
+                                alt="Samkok Heroes TD gameplay screenshot 7" loading="lazy">
+                        </button>
+                        <button type="button" class="media-thumbnail" data-type="image"
+                            data-src="assets/samkok-td/gameplay8.jpg">
+                            <img src="assets/samkok-td/thumbs/gameplay8.jpg"
+                                alt="Samkok Heroes TD gameplay screenshot 8" loading="lazy">
+                        </button>
                     </div>
                 </div>
 
                 <div class="detail-top-grid">
                     <div class="detail-card">
-                        <h4>About</h4>
+                        <h3>About</h3>
                         <p>Samkok Heroes TD is a strategic Hero Tower Defense game set in a vibrant 3D fantasy world.
                             Players collect and deploy a roster of legendary heroes, each with unique abilities, to
                             defend against relentless hordes of monsters and epic bosses. Success hinges on tactical
@@ -605,20 +595,20 @@
                             overcome escalating challenges.</p>
                     </div>
                     <div class="detail-card project-info-card">
-                        <h4>Project Info</h4>
+                        <h3>Project Info</h3>
                         <ul>
-                            <li><i class="fas fa-user-tie"></i> <strong>Role:</strong> Lead Designer & Game Developer
+                            <li><i class="fas fa-user-tie" aria-hidden="true"></i> <strong>Role:</strong> Lead Designer & Game Developer
                             </li>
-                            <li><i class="fas fa-users"></i> <strong>Team Size:</strong> 4</li>
-                            <li><i class="fas fa-clock"></i> <strong>Time frame:</strong> July 2025 - Present</li>
-                            <li><i class="fas fa-cogs"></i> <strong>Engine:</strong> Unity</li>
+                            <li><i class="fas fa-users" aria-hidden="true"></i> <strong>Team Size:</strong> 4</li>
+                            <li><i class="fas fa-clock" aria-hidden="true"></i> <strong>Time frame:</strong> July 2025 - Present</li>
+                            <li><i class="fas fa-cogs" aria-hidden="true"></i> <strong>Engine:</strong> Unity</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="detail-main-text">
-                    <div class="detail-section">
-                        <h4>Development Deep Dive</h4>
+                    <section class="detail-section">
+                        <h3>Development Deep Dive</h3>
                         <p>For this project, I took on the role of Lead Designer, responsible for architecting the
                             entire player experience from concept to execution. The mission was to create a deeply
                             engaging Hero Tower Defense game with extensive long-term retention systems, setting it
@@ -637,12 +627,12 @@
                             a wide range of mobile devices. This project represents my growth into a leadership role,
                             guiding the game's overall design while still directly contributing to its technical
                             implementation.</p>
-                    </div>
-                    <div class="detail-section">
-                        <h4>My Contributions</h4>
+                    </section>
+                    <section class="detail-section">
+                        <h3>My Contributions</h3>
                         <p>In this project, I stepped into a leadership role while continuing to perform key development
                             tasks.</p>
-                        <h5 class="contribution-subtitle">As a Lead Designer:</h5>
+                        <h4 class="contribution-subtitle">As a Lead Designer:</h4>
                         <ul>
                             <li><strong>Core Gameplay Architect:</strong> Designed the entire gameplay loop, core
                                 mechanics, and various game modes from the ground up.</li>
@@ -655,7 +645,7 @@
                                 balancing of all heroes, enemies, and progression systems, and defined the overall UX
                                 flow.</li>
                         </ul>
-                        <h5 class="contribution-subtitle">As a Game Developer:</h5>
+                        <h4 class="contribution-subtitle">As a Game Developer:</h4>
                         <ul>
                             <li><strong>Gameplay & AI Programming:</strong> Implemented core gameplay features and
                                 developed complex AI behaviors for a wide variety of enemies and bosses.</li>
@@ -665,11 +655,25 @@
                                 smooth performance on mobile devices, especially during scenes with a high number of
                                 units and visual effects.</li>
                         </ul>
-                    </div>
+                    </section>
                 </div>
             </div>
+        </article>
+    </div>
+
+    <!-- CV Modal (outside the views so it is never made inert along with them) -->
+    <div id="cv-modal" class="modal" role="dialog" aria-modal="true" aria-label="Resume" hidden>
+        <div class="modal-content">
+            <button type="button" class="close-modal" aria-label="Close resume">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+            <iframe class="cv-frame" data-src="assets/NguyenDangHung_CV.pdf" title="Hung Dang Nguyen resume"></iframe>
+            <a href="assets/NguyenDangHung_CV.pdf" class="download-cv" download>
+                <i class="fas fa-download" aria-hidden="true"></i> Download CV
+            </a>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 
