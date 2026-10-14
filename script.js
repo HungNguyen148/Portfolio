@@ -82,6 +82,51 @@ document.addEventListener('DOMContentLoaded', () => {
         mainContainer.replaceChildren(media);
     }
 
+    // Shows the video's thumbnail as a stand-in so the slide animation never competes with the
+    // YouTube player download. showMedia() replaces it once the slide has finished.
+    function showPoster(projectView, thumb) {
+        projectView.querySelectorAll('.media-thumbnail').forEach(t => {
+            t.classList.toggle('active', t === thumb);
+            t.setAttribute('aria-pressed', String(t === thumb));
+        });
+
+        const poster = document.createElement('img');
+        poster.src = thumb.querySelector('img').src;
+        poster.alt = thumb.dataset.title || thumb.querySelector('img').alt;
+        poster.dataset.poster = 'true';
+        projectView.querySelector('.media-main').replaceChildren(poster);
+    }
+
+    function showFirstMedia(detailView) {
+        const firstThumb = detailView.querySelector('.media-thumbnail');
+        if (!firstThumb) return;
+
+        if (firstThumb.dataset.type !== 'video') {
+            showMedia(detailView, firstThumb);
+            return;
+        }
+
+        showPoster(detailView, firstThumb);
+
+        let done = false;
+        const loadVideo = () => {
+            if (done) return;
+            done = true;
+            detailView.removeEventListener('transitionend', onTransitionEnd);
+            // Skip if the visitor already picked another thumbnail or left the project
+            const current = detailView.querySelector('.media-main').firstElementChild;
+            if (detailView.classList.contains('view-active') && current && current.dataset.poster) {
+                showMedia(detailView, firstThumb);
+            }
+        };
+        const onTransitionEnd = (e) => {
+            if (e.target === detailView && e.propertyName === 'transform') loadVideo();
+        };
+        detailView.addEventListener('transitionend', onTransitionEnd);
+        // transitionend never fires if no slide happens, so don't rely on it alone
+        setTimeout(loadVideo, 600);
+    }
+
     // Removing the iframe is the only reliable way to stop a YouTube video that is still playing
     function clearMedia(projectView) {
         projectView.querySelector('.media-main').replaceChildren();
@@ -123,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!detailView.classList.contains('view-active')) {
                 setViewActive(detailView, true);
                 detailView.scrollTop = 0;
-                showMedia(detailView, detailView.querySelector('.media-thumbnail'));
+                showFirstMedia(detailView);
                 if (moveFocus) {
                     detailView.querySelector('.back-button').focus({ preventScroll: true });
                 }

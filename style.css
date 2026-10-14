@@ -39,8 +39,7 @@ body {
 
 .resume-button:hover,
 .download-cv:hover,
-.back-button:hover,
-.tech-tag:hover {
+.back-button:hover {
     animation: buttonBounce 0.6s ease-in-out;
     filter: brightness(1.1);
 }
@@ -52,10 +51,10 @@ body {
 }
 
 /* Staggered animation delays for different sections */
-#projects.fade-in-section { transition-delay: 0.1s; }
-#education.fade-in-section { transition-delay: 0.2s; }
-#technical-experience.fade-in-section { transition-delay: 0.3s; }
-#contact.fade-in-section { transition-delay: 0.4s; }
+#projects.fade-in-section { transition-delay: 0.05s; }
+#education.fade-in-section { transition-delay: 0.1s; }
+#technical-experience.fade-in-section { transition-delay: 0.15s; }
+#contact.fade-in-section { transition-delay: 0.2s; }
 
 .fade-in-section.is-visible {
     opacity: 1;
@@ -137,7 +136,7 @@ body {
 
 /* --- View Structure & Slide Transition --- */
 .portfolio-container { position: relative; width: 100%; height: 100vh; height: 100dvh; }
-.view { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow-y: auto; background-color: var(--background-color); transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1); }
+.view { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow-y: auto; background-color: var(--background-color); transition: transform 0.4s cubic-bezier(0.32, 0.72, 0, 1); }
 .view-detail { transform: translateX(100%); }
 .view.view-active { transform: translateX(0); }
 .view.view-hidden { transform: translateX(-100%); }
@@ -152,7 +151,7 @@ body {
     color: var(--accent-color);
     max-width: 800px;
     line-height: 1.4;
-    margin: 0 auto 4rem;
+    margin: 0 auto 2.5rem;
     text-align: center;
     background: linear-gradient(135deg, var(--accent-color), var(--accent-color-2));
     -webkit-background-clip: text;
@@ -160,8 +159,9 @@ body {
     -webkit-text-fill-color: transparent;
     padding: 0 2rem;
 }
-.main-nav { display: flex; align-items: center; gap: 1.5rem; }
-.main-nav a { color: var(--secondary-text-dark-bg); font-size: 1.5rem; transition: color 0.3s ease; }
+.main-nav { display: flex; align-items: center; gap: 0.5rem; }
+/* 44px minimum touch target; the icon itself stays 24px */
+.main-nav a { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; color: var(--secondary-text-dark-bg); font-size: 1.5rem; transition: color 0.3s ease; }
 .main-nav a:hover { color: var(--accent-color); }
 
 /* Resume Button Styling */
@@ -169,6 +169,7 @@ body {
     color: var(--accent-color);
     border: 1px solid var(--accent-color);
     padding: 0.5rem 1rem;
+    min-height: 44px;
     border-radius: 5px;
     font: inherit;
     font-size: 1rem;
@@ -188,7 +189,7 @@ body {
 
 /* Hero Section */
 #hero { padding: 2rem 5% 4rem; }
-.hero-content { display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 3rem; min-height: 70vh; }
+.hero-content { display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 3rem; min-height: 50vh; }
 
 /* Profile Picture */
 .profile-pic-container {
@@ -263,7 +264,7 @@ main section h2::after {
     background-color: var(--background-color);
     border-radius: 12px;
     overflow: hidden;
-    transition: all 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     border: 1px solid var(--border-color);
     color: var(--primary-text-dark-bg);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -296,15 +297,30 @@ footer { background-color: var(--surface-color); text-align: center; padding: 4r
 footer h3 { font-size: 1.8rem; margin-bottom: 1rem; }
 footer p { color: var(--secondary-text-dark-bg); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto; }
 .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem 2rem; }
-.footer-links a { color: var(--secondary-text-dark-bg); transition: color 0.3s ease; }
+.footer-links a { display: inline-block; padding: 0.6rem 0; color: var(--secondary-text-dark-bg); transition: color 0.3s ease; }
 .footer-links a:hover { color: var(--accent-color); }
 
 /* Detail View Styling */
-.detail-header { display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: center; padding: 2rem 5%; border-bottom: 1px solid var(--border-color); }
-.back-button { color: var(--accent-color); font-size: 1.2rem; font-weight: 600; display: inline-block; transition: color 0.2s ease; }
+/* Stays pinned while the (long) detail page scrolls, so Go Back is always one tap away.
+   A solid background keeps it cheap to paint on low-end phones. */
+.detail-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem 2rem;
+    align-items: center;
+    padding: 0.75rem 5%;
+    background-color: var(--background-color);
+    border-bottom: 1px solid var(--border-color);
+}
+/* Padding gives a 44px touch target; the negative margin keeps the arrow aligned with the page edge */
+.back-button { color: var(--accent-color); font-size: 1.2rem; font-weight: 600; display: inline-flex; align-items: center; min-height: 44px; padding: 0 1rem; margin-left: -1rem; transition: color 0.2s ease; }
 .back-button:hover { color: var(--primary-text-dark-bg); }
 .back-button i { margin-right: 10px; }
-.detail-header h2 { font-size: 1.5rem; }
+.back-button { flex-shrink: 0; }
+.detail-header h2 { font-size: 1.5rem; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 .detail-content { max-width: 940px; margin: 0 auto; padding: 2rem 1rem; }
 
@@ -335,7 +351,15 @@ footer p { color: var(--secondary-text-dark-bg); margin-bottom: 2rem; max-width:
     gap: 0.5rem;
     overflow-x: auto;
     padding: 4px 4px 0.5rem;
+    /* Thin dark scrollbar instead of the bright default one */
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-color) transparent;
 }
+
+.media-strip::-webkit-scrollbar { height: 6px; }
+.media-strip::-webkit-scrollbar-track { background: transparent; }
+.media-strip::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 3px; }
+.media-strip::-webkit-scrollbar-thumb:hover { background: var(--secondary-text-dark-bg); }
 
 .media-thumbnail {
     position: relative;
@@ -504,6 +528,9 @@ footer p { color: var(--secondary-text-dark-bg); margin-bottom: 2rem; max-width:
     .tagline { margin-bottom: 2rem; padding: 0; }
 
     .detail-card { padding: 1.5rem; }
+
+    .detail-header { gap: 0.5rem 1rem; }
+    .detail-header h2 { font-size: 1.2rem; }
 
     .modal-content { width: 95%; height: 92%; margin: 4% auto; padding: 12px; }
 }
