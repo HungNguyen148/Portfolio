@@ -16,7 +16,12 @@
         content="Designing the vision. Engineering the experience. Mobile Action-Roguelike and Tower Defense games built in Unity.">
     <meta property="og:url" content="https://hungnguyen148.github.io/Portfolio/">
     <meta property="og:image" content="https://hungnguyen148.github.io/Portfolio/assets/heroes-survivor-splash.jpg">
+    <meta property="og:image:alt" content="Heroes Survivor splash art">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hung Dang Nguyen - Game Designer & Technical Designer">
+    <meta name="twitter:description"
+        content="Designing the vision. Engineering the experience. Mobile Action-Roguelike and Tower Defense games built in Unity.">
+    <meta name="twitter:image" content="https://hungnguyen148.github.io/Portfolio/assets/heroes-survivor-splash.jpg">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="512x512" href="./assets/favicon/gamepad-icon.png">
@@ -48,7 +53,7 @@
                     <p>Game Designer & Technical Designer</p>
                 </div>
                 <nav class="main-nav" aria-label="Social links">
-                    <a href="https://www.linkedin.com/in/dang-hung-nguyen-493aa4200/" target="_blank"
+                    <a href="https://www.linkedin.com/in/nguyendanghung148/" target="_blank"
                         rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
                     <a href="https://github.com/HungNguyen148" target="_blank" rel="noopener noreferrer"
                         aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
@@ -137,7 +142,7 @@
                 <div class="education-grid">
                     <div class="education-card">
                         <h3>Yoshida College (2020-2022)</h3>
-                        <p>Master Degree of Game Making</p>
+                        <p>Master Degree in Game Production (ゲーム制作)</p>
                     </div>
                     <div class="education-card">
                         <h3>Nguyen Tat Thanh University (2013-2018)</h3>
@@ -167,7 +172,7 @@
                     <li class="tech-tag">Git</li>
                     <li class="tech-tag">Azure Playfab</li>
                     <li class="tech-tag">Firebase</li>
-                    <li class="tech-tag">Claude Code</li>
+                    <li class="tech-tag">AI-assisted Development</li>
                 </ul>
             </section>
 
@@ -177,7 +182,7 @@
                     media.</p>
                 <div class="footer-links">
                     <a href="mailto:ndanghung14895@gmail.com">ndanghung14895@gmail.com</a>
-                    <a href="https://www.linkedin.com/in/dang-hung-nguyen-493aa4200/" target="_blank"
+                    <a href="https://www.linkedin.com/in/nguyendanghung148/" target="_blank"
                         rel="noopener noreferrer">LinkedIn</a>
                     <a href="https://github.com/HungNguyen148" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
@@ -241,7 +246,7 @@
                         <ul>
                             <li><i class="fas fa-user-tie" aria-hidden="true"></i> <strong>Role:</strong> Technical Designer & Unity Developer</li>
                             <li><i class="fas fa-users" aria-hidden="true"></i> <strong>Team Size:</strong> 5-10</li>
-                            <li><i class="fas fa-clock" aria-hidden="true"></i> <strong>Time frame:</strong> 2022 - Present</li>
+                            <li><i class="fas fa-clock" aria-hidden="true"></i> <strong>Time frame:</strong> 2022 - 2024</li>
                             <li><i class="fas fa-cogs" aria-hidden="true"></i> <strong>Engine:</strong> Unity</li>
                             <li><i class="fab fa-google-play" aria-hidden="true"></i> <strong>Store:</strong> <a
                                     href="https://play.google.com/store/apps/details?id=co.imba.dynasty.archer"
@@ -249,11 +254,18 @@
                         </ul>
                     </div>
                 </div>
-                <div class="detail-main-text">
+                <section class="detail-metrics" aria-label="Dynasty Archer key metrics">
+                    <div class="metric"><span class="metric-value">100K+</span><span class="metric-label">Downloads (Google Play)</span></div>
+                    <div class="metric"><span class="metric-value">4.7&#9733;</span><span class="metric-label">Google Play Rating</span></div>
+                    <div class="metric"><span class="metric-value">4.8&#9733;</span><span class="metric-label">App Store Rating</span></div>
+                    <div class="metric"><span class="metric-value">15K+</span><span class="metric-label">Store Reviews</span></div>
+                </section>
+
+<div class="detail-main-text">
                     <section class="detail-section">
                         <h3>Development Deep Dive</h3>
-                        <p>Dynasty Archer is a long-running Three Kingdoms action-roguelike for mobile, and over roughly
-                            two and a half years (390+ commits) I became the person who carried its content pipeline.
+                        <p>Dynasty Archer is a Three Kingdoms action-roguelike for mobile, and over roughly
+                            two and a half years (390+ commits, 2022 to 2024) I became the person who carried its content pipeline.
                             My work sat between design and engineering: I designed hero and boss behavior, then built
                             it in Unity and wired it into the config data that drives each release.</p>
                         <p>The core of that work was heroes. I built or completed <strong>18+ heroes</strong> end to
@@ -273,7 +285,37 @@
                             toggled features per release, and maintained localization (including Japanese and skill
                             names) as new content shipped.</p>
                     </section>
-                    <section class="detail-section">
+                    <section class="detail-section case-study">
+                        <h3>Design Spotlight: Hero Skill Kits</h3>
+                        <p>Every hero had to feel different to play while still fitting one shared pipeline. I
+                            started from a skill archetype for each hero, built it on top of the shared skill and
+                            projectile systems, and only wrote custom logic where the archetype needed it.</p>
+                        <div class="table-scroll">
+                            <table class="case-table">
+                                <thead>
+                                    <tr><th scope="col">Hero</th><th scope="col">Archetype</th><th scope="col">What it adds to play</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">Liu Bei</th><td>Summon</td><td>A Shadow Runner clone fights beside the player, so positioning matters for two bodies.</td></tr>
+                                    <tr><th scope="row">Lu Bu</th><td>Sustain</td><td>Life drain rewards staying in the fight instead of kiting forever.</td></tr>
+                                    <tr><th scope="row">Xiahou Yuan</th><td>Channeled</td><td>A held cast trades mobility for damage, creating a commit-or-dodge decision.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <ol class="flow-steps" aria-label="Hero delivery pipeline">
+                            <li>Model &amp; animation import</li>
+                            <li>Prefab</li>
+                            <li>Active &amp; passive skills</li>
+                            <li>Projectiles &amp; VFX</li>
+                            <li>Voice, icon &amp; hero select</li>
+                            <li>Try-hero mode</li>
+                            <li>Shard config &amp; release</li>
+                        </ol>
+                        <p>Because the same pipeline repeated for 18+ heroes, I treated it as a checklist. Each hero
+                            went through the same steps, and release config switched the finished hero on, which kept
+                            new content shippable without engine changes.</p>
+                    </section>
+<section class="detail-section">
                         <h3>My Contributions</h3>
                         <p>I covered gameplay design, technical design, and Unity development for heroes, bosses,
                             chapters, and release config.</p>
@@ -371,7 +413,13 @@
                         </ul>
                     </div>
                 </div>
-                <div class="detail-main-text">
+                <section class="detail-metrics" aria-label="Heroes Survivor key metrics">
+                    <div class="metric"><span class="metric-value">100K+</span><span class="metric-label">Downloads (Google Play)</span></div>
+                    <div class="metric"><span class="metric-value">4.7&#9733;</span><span class="metric-label">Google Play Rating</span></div>
+                    <div class="metric"><span class="metric-value">7.9K+</span><span class="metric-label">Google Play Reviews</span></div>
+                </section>
+
+<div class="detail-main-text">
                     <section class="detail-section">
                         <h3>Development Deep Dive</h3>
                         <p>Heroes Survivor is a roguelike bullet-hell game for mobile, built in Unity with C# and
@@ -499,16 +547,23 @@
                         <ul>
                             <li><i class="fas fa-user-tie" aria-hidden="true"></i> <strong>Role:</strong> Gameplay Developer & Technical Artist</li>
                             <li><i class="fas fa-users" aria-hidden="true"></i> <strong>Team Size:</strong> ~20</li>
-                            <li><i class="fas fa-clock" aria-hidden="true"></i> <strong>Time frame:</strong> August 2023 - February 2026</li>
+                            <li><i class="fas fa-clock" aria-hidden="true"></i> <strong>Time frame:</strong> August 2023 - Present</li>
                             <li><i class="fas fa-cogs" aria-hidden="true"></i> <strong>Engine:</strong> Unity</li>
                         </ul>
                     </div>
                 </div>
-                <div class="detail-main-text">
+                <section class="detail-metrics" aria-label="Archer Hunter key metrics">
+                    <div class="metric"><span class="metric-value">1M+</span><span class="metric-label">Downloads (Google Play)</span></div>
+                    <div class="metric"><span class="metric-value">4.5&#9733;</span><span class="metric-label">Google Play Rating</span></div>
+                    <div class="metric"><span class="metric-value">24.9%</span><span class="metric-label">D1 Retention</span></div>
+                    <div class="metric"><span class="metric-value">9.3%</span><span class="metric-label">D7 Retention</span></div>
+                </section>
+
+<div class="detail-main-text">
                     <section class="detail-section">
                         <h3>Development Deep Dive</h3>
                         <p>Archer Hunter is a live mobile action game built in Unity for Android and iOS by a team of
-                            about 20. I joined in August 2023 and worked on it for roughly two and a half years, adding
+                            about 20. I joined in August 2023 and have worked on it for over three years, adding
                             content and features to an existing, large codebase. My work covered gameplay programming,
                             VFX, feature UI, and the data config behind each release.</p>
                         <p>Heroes were my main area. I reworked Katherine, Swift (including melee attacks), and Ares,
@@ -648,7 +703,14 @@
                     </div>
                 </div>
 
-                <div class="detail-main-text">
+                <section class="detail-metrics" aria-label="Samkok Heroes TD key metrics">
+                    <div class="metric"><span class="metric-value">50K+</span><span class="metric-label">Downloads (Google Play)</span></div>
+                    <div class="metric"><span class="metric-value">4.6&#9733;</span><span class="metric-label">Google Play Rating (1,500+ reviews)</span></div>
+                    <div class="metric"><span class="metric-value">32%</span><span class="metric-label">D1 Retention (Android)</span></div>
+                    <div class="metric"><span class="metric-value">27K</span><span class="metric-label">Monthly Active Users</span></div>
+                </section>
+
+<div class="detail-main-text">
                     <section class="detail-section">
                         <h3>Development Deep Dive</h3>
                         <p>On Samkok Heroes TD, my work was spread across three disciplines: game design, technical
@@ -674,7 +736,30 @@
                             handled the 3D pipeline for new heroes, monsters, and bosses: models, animation, VFX, and
                             shader and material updates.</p>
                     </section>
-                    <section class="detail-section">
+                    <section class="detail-section case-study">
+                        <h3>Design Spotlight: Rebalancing Chapters 46&ndash;90</h3>
+                        <div class="case-grid">
+                            <div class="case-block">
+                                <h4>Problem</h4>
+                                <p>Late chapters were hard to tune. Monster HP and wave density were tied together, so
+                                    every fix to one shifted the other, and difficulty spiked sharply around
+                                    chapters 46&ndash;48.</p>
+                            </div>
+                            <div class="case-block">
+                                <h4>Approach</h4>
+                                <p>I separated monster HP from wave density so each could be tuned on its own, then
+                                    defined one difficulty curve running to chapter 90 for both Normal and Elite.
+                                    Changes were measured, and reverted when they did not hold up.</p>
+                            </div>
+                            <div class="case-block">
+                                <h4>Outcome</h4>
+                                <p>The spike around chapters 46&ndash;48 was smoothed, the curve carries through to
+                                    chapter 90, and chapters can be retuned through config alone, with no code
+                                    change. I also reworked the chapter reward curve to match.</p>
+                            </div>
+                        </div>
+                    </section>
+<section class="detail-section">
                         <h3>My Contributions</h3>
                         <p>My role covered content design, systems design, and the technical art needed to ship them.
                             Key numbers: 90 chapters (Normal and Elite), 550+ config files, and 140+ localization
@@ -767,7 +852,7 @@
                         <ul>
                             <li><i class="fas fa-user-tie" aria-hidden="true"></i> <strong>Role:</strong> Technical Artist & Gameplay Developer</li>
                             <li><i class="fas fa-users" aria-hidden="true"></i> <strong>Team Size:</strong> ~10</li>
-                            <li><i class="fas fa-clock" aria-hidden="true"></i> <strong>Time frame:</strong> June 2026 - August 2026</li>
+                            <li><i class="fas fa-clock" aria-hidden="true"></i> <strong>Time frame:</strong> June 2026 - Present</li>
                             <li><i class="fas fa-cogs" aria-hidden="true"></i> <strong>Engine:</strong> Unity 6</li>
                             <li><i class="fab fa-google-play" aria-hidden="true"></i> <strong>Store:</strong> <a
                                     href="https://play.google.com/store/apps/details?id=co.imba.namquocsonha"
@@ -776,12 +861,19 @@
                     </div>
                 </div>
 
-                <div class="detail-main-text">
+                <section class="detail-metrics" aria-label="Nam Quốc Sơn Hà key metrics">
+                    <div class="metric"><span class="metric-value">10K+</span><span class="metric-label">Downloads (Google Play)</span></div>
+                    <div class="metric"><span class="metric-value">4.7&#9733;</span><span class="metric-label">Store Rating (1,400+ reviews)</span></div>
+                    <div class="metric"><span class="metric-value">31.5%</span><span class="metric-label">Week 1 Retention</span></div>
+                    <div class="metric"><span class="metric-value">36K</span><span class="metric-label">Monthly Active Users</span></div>
+                </section>
+
+<div class="detail-main-text">
                     <section class="detail-section">
                         <h3>Development Deep Dive</h3>
-                        <p>From June to August 2026 I worked on Nam Quốc Sơn Hà across technical art and gameplay code,
-                            with 40 commits over about three months. My focus was the part of the game players fight against: the models, animations, behavior, and
-                            weapons of mobs, elites, and bosses.</p>
+                        <p>Since June 2026 I have been working on Nam Quốc Sơn Hà across technical art and gameplay code,
+                            with 40+ commits so far. My focus is the part of the game players fight against: the models,
+                            animations, behavior, and weapons of mobs, elites, and bosses.</p>
                         <p>The work followed a repeatable pipeline from model to animation to AI to config. In June I
                             brought in new Vietnamese hero models with their animations, FX, and weapons, reworked
                             the textures for the Chapter 1 ships and the Chapter 2 mobs, and updated the AnimMap shader

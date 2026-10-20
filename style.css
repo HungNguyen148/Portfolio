@@ -546,3 +546,113 @@ footer p { color: var(--secondary-text-dark-bg); margin-bottom: 2rem; max-width:
 
     .fade-in-section { opacity: 1; transform: none; }
 }
+
+/* Key Metrics (project detail) */
+.detail-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.detail-metrics[hidden] { display: none; }
+
+.metric {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.25rem;
+    text-align: center;
+}
+
+.metric-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+.metric-label {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.9rem;
+    color: var(--secondary-text-dark-bg);
+}
+
+/* Design Spotlight (case studies) */
+.case-study {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+.table-scroll { overflow-x: auto; margin: 1.5rem 0; }
+
+.case-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+    min-width: 520px;
+}
+
+.case-table th,
+.case-table td {
+    text-align: left;
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--secondary-text-dark-bg);
+    line-height: 1.5;
+}
+
+.case-table thead th {
+    color: var(--primary-text-dark-bg);
+    font-weight: 600;
+}
+
+.case-table tbody th { color: var(--primary-text-dark-bg); font-weight: 600; white-space: nowrap; }
+
+.flow-steps {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+    counter-reset: step;
+}
+
+.flow-steps li {
+    counter-increment: step;
+    padding: 0.5rem 0.9rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 999px;
+    font-size: 0.95rem;
+    color: var(--primary-text-dark-bg);
+}
+
+.flow-steps li::before {
+    content: counter(step) ". ";
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.case-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+@media (min-width: 992px) {
+    .case-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.detail-main-text .case-block h4 {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-text-dark-bg);
+}
+
+@media (max-width: 768px) {
+    .case-study { padding: 1.5rem; }
+}
