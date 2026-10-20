@@ -338,6 +338,7 @@ footer p { color: var(--secondary-text-dark-bg); margin-bottom: 2rem; max-width:
 }
 
 .media-main iframe,
+.media-main video,
 .media-main img {
     display: block;
     width: 100%;

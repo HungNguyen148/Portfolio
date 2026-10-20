@@ -73,6 +73,15 @@ document.addEventListener('DOMContentLoaded', () => {
             media.referrerPolicy = 'strict-origin-when-cross-origin';
             media.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
             media.allowFullscreen = true;
+        } else if (type === 'clip') {
+            // Short looping gameplay clip: an MP4 is a fraction of the size of the GIF it replaces
+            media = document.createElement('video');
+            media.src = src;
+            media.autoplay = true;
+            media.loop = true;
+            media.muted = true;
+            media.playsInline = true;
+            media.controls = true;
         } else {
             media = document.createElement('img');
             media.src = src;
